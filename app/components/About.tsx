@@ -9,6 +9,7 @@ export default function About() {
           height={500}
           alt="Daniel Image"
           className="rounded-3xl"
+          priority={true}
         />
       </div>
       <div className="pl-24 w-3/5">
