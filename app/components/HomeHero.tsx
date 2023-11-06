@@ -1,4 +1,5 @@
 import styles from "@/app/page.module.css";
+import Link from "next/link";
 export default function HomeHero() {
   return (
     <section className="flex flex-col justify-center items-center h-screen min-h-full relative z-10 w-full">
@@ -18,10 +19,10 @@ export default function HomeHero() {
         </div>
       </div>
       <div className="flex flex-col absolute bottom-7 right-0 font-extralight text-xl">
-        <span>Instagram</span>
-        <span>Facebook</span>
-        <span>Email</span>
-        <span>LinkedIn</span>
+        <Link href="">Instagram</Link>
+        <Link href="">Facebook</Link>
+        <Link href="">Email</Link>
+        <Link href="">LinkedIn</Link>
       </div>
     </section>
   );

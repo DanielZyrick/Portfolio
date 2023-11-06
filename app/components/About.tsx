@@ -8,7 +8,7 @@ export default function About() {
           width={500}
           height={500}
           alt="Daniel Image"
-          className="rounded-3xl"
+          className="rounded-full"
           priority={true}
         />
       </div>
@@ -18,7 +18,7 @@ export default function About() {
           distinctive. We'll establish the new standard for excellence to one
           another. Unexpected and constantly at the forefront of things.
         </p>
-        <div className="flex">
+        <div className="flex items-center">
           <p className="w-1/2 mr-10">
             I enjoy within the field of web development because of my love for
             design, coding, and interaction.
