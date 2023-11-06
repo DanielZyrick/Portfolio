@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import styles from "./page.module.css";
 import HomeHero from "./components/HomeHero";
 import About from "./components/About";
+import Services from "./components/Services";
+import Work from "./components/Work";
 
 export default function Home() {
   useEffect(() => {
@@ -15,6 +17,8 @@ export default function Home() {
     <main className={styles.main}>
       <HomeHero />
       <About />
+      <Services />
+      <Work />
     </main>
   );
 }

@@ -14,7 +14,7 @@ function Navbar() {
   ];
   return (
     <div className="flex justify-between space-x-6 h-14 items-center mb-5 px-20 absolute w-full z-20">
-      <Link href="/" className="text-xl">
+      <Link href="/" className="text-2xl">
         DG
       </Link>
       <ul className="flex space-x-6">
