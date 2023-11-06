@@ -1,5 +1,5 @@
-import { AiOutlineLinkedin, AiOutlineInstagram } from "react-icons/ai";
-import { CiFacebook } from "react-icons/ci";
+import { AiFillInstagram } from "react-icons/ai";
+import { BsLinkedin, BsFacebook } from "react-icons/bs";
 export default function Contact() {
   return (
     <section className="my-10">
@@ -22,10 +22,10 @@ export default function Contact() {
             +000 00 0000 00
           </span>
         </div>
-        <div className="flex gap-1">
-          <AiOutlineLinkedin size={30} />
-          <AiOutlineInstagram size={30} />
-          <CiFacebook size={30} />
+        <div className="flex gap-1.5">
+          <BsLinkedin size={25} />
+          <AiFillInstagram size={25} />
+          <BsFacebook size={25} />
         </div>
       </div>
       <div className="flex items-center justify-center relative">
