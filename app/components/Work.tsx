@@ -1,7 +1,7 @@
 import { FiArrowUpRight } from "react-icons/fi";
 export default function Work() {
   return (
-    <section className="my-20">
+    <section className="my-20 px-20">
       <div>
         <h4 className="font-light">Site that i created.</h4>
       </div>

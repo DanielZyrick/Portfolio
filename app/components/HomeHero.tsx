@@ -2,7 +2,7 @@ import styles from "@/app/page.module.css";
 import Link from "next/link";
 export default function HomeHero() {
   return (
-    <section className="flex flex-col justify-center items-center h-screen min-h-full relative z-10 w-full">
+    <section className="flex flex-col justify-center items-center h-screen min-h-full relative z-10 mx-20">
       <div>
         <h1 className="text-9xl p-5">Daniel Zyrick Gayao</h1>
       </div>

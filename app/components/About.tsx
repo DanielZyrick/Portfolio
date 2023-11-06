@@ -1,14 +1,14 @@
 import Image from "next/image";
 export default function About() {
   return (
-    <section className="flex justify-center items-center px-36 mt-36 mb-20">
+    <section className="flex justify-center items-center px-56 mt-36 mb-20">
       <div className="w-2/5">
         <Image
           src="/1.jpg"
           width={500}
-          height={500}
+          height={750}
           alt="Daniel Image"
-          className="rounded-full"
+          className="rounded-3xl"
           priority={true}
         />
       </div>
