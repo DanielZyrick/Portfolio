@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.bgRadial {
+  background: radial-gradient(
+    circle,
+    rgb(87 87 87) 0%,
+    rgb(119 119 119) 15%,
+    rgb(255 255 255) 69%,
+    rgb(255 255 255) 100%
+  );
+  width: 700px;
+  height: 700px;
+  border-radius: 9999px;
+  position: absolute;
+  z-index: -1;
+}
