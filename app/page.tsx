@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import styles from "./page.module.css";
 import HomeHero from "./components/Home/HomeHero";
 import About from "./components/Home/About";
-import Services from "./components/Home/Services";
+import Services from "./components/Services";
 import Work from "./components/Home/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";

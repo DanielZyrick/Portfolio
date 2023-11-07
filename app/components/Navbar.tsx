@@ -8,8 +8,8 @@ function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
-    { label: "Work", href: "/work" },
     { label: "About", href: "/about" },
+    { label: "Work", href: "/work" },
     { label: "Contact", href: "/contact" },
   ];
   return (
@@ -19,7 +19,7 @@ function Navbar() {
       </Link>
       <ul className="flex space-x-6">
         {navItems.map((item) => (
-          <li key={item.href}>
+          <li className="text-xl font-light" key={item.href}>
             <Link
               href={item.href}
               className={classNames({
