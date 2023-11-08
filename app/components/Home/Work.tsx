@@ -13,12 +13,11 @@ export default function Work() {
         <h4 className="font-light">Site that i created.</h4>
       </div>
       <div className="pt-5">
-        {workItems.map((items, index) => (
-          <Link href={items.href}>
+        {workItems.map((items, i) => (
+          <Link href={items.href} key={i}>
             <div
-              key={index}
               className={`flex items-center justify-between border-b border-gray-900 py-10 
-              ${index === 0 ? "border-t" : ""}`}
+              ${i === 0 ? "border-t" : ""}`}
             >
               <h5 className="text-7xl">{items.label}</h5>
               <FiArrowUpRight size={40} />

@@ -29,7 +29,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="flex items-center justify-center relative mx-20 mb-10">
-        <div className="border border-black w-full absolute z-0"></div>
+        <div className="border-t border-black w-full absolute z-0"></div>
         <button className="w-56 h-20 rounded-full bg-gray-900 text-white text-lg z-10">
           Get in touch
         </button>
