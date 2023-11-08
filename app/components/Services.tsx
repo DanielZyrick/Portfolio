@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Services() {
   return (
-    <section className="py-20 w-full px-20">
+    <section className="p-20 w-full">
       <div className="mb-10">
         <h3 className="text-4xl font-extralight">
           Things i can do to help you
