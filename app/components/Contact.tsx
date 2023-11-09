@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 export default function Contact() {
   return (
-    <section className="my-10">
+    <section className="my-10 w-full">
       <div className="mb-20 overflow-hidden">
         <h5 className="text-9xl font-bold text-white font-outline-2 whitespace-nowrap">
           LET'S WORK TOGETHER - LET'S WORK TOGETHER
@@ -13,26 +14,47 @@ export default function Contact() {
           Are you ready to take on the excitement?
         </h3>
       </div>
-      <div className="flex items-center justify-between mb-10 px-20">
-        <div className="flex text-2xl gap-10">
-          <span className="flex w-56 justify-center items-center h-14 rounded-full outline outline-1">
-            Site@DG.com
-          </span>
-          <span className="flex w-64 justify-center items-center h-14 rounded-full outline outline-1">
-            +000 00 0000 00
-          </span>
+      <div className="flex flex-col 2xl:flex-row items-center justify-between mb-10 px-20">
+        <div className="flex flex-col 2xl:flex-row text-2xl gap-10">
+          <Link
+            href="mailto:daniel.gayao7@gmail.com"
+            className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5"
+          >
+            daniel.gayao7@gmail.com
+          </Link>
+          <Link
+            href="tel:+639062173558"
+            className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5"
+          >
+            +63906 217 3558
+          </Link>
         </div>
         <div className="flex gap-1.5">
-          <BsLinkedin size={25} />
-          <AiFillInstagram size={25} />
-          <BsFacebook size={25} />
+          <Link
+            href="https://www.linkedin.com/in/daniel-gayao-9611a2207/"
+            target="_blank"
+          >
+            <BsLinkedin size={25} />
+          </Link>
+          <Link href="https://instagram.com/dzyrick2" target="_blank">
+            <AiFillInstagram size={25} />
+          </Link>
+          <Link
+            href="https://www.facebook.com/daniel.zyrick?mibextid=LQQJ4d"
+            target="_blank"
+          >
+            <BsFacebook size={25} />
+          </Link>
         </div>
       </div>
       <div className="flex items-center justify-center relative mx-20 mb-10">
         <div className="border-t border-black w-full absolute z-0"></div>
-        <button className="w-56 h-20 rounded-full bg-gray-900 text-white text-lg z-10">
+        <Link
+          href="/contact"
+          className="flex justify-center items-center w-56 h-20 rounded-full bg-gray-900 text-white text-lg z-10"
+        >
           Get in touch
-        </button>
+        </Link>
       </div>
     </section>
   );

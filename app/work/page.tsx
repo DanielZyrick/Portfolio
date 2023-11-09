@@ -15,7 +15,7 @@ export default function page() {
     <>
       <section className="pt-32 px-20 relative">
         <div className="w-2/4 pb-20">
-          <h2 className="text-7xl">
+          <h2 className="text-7xl font-light">
             Here is a small sampling of my top website.{" "}
           </h2>
         </div>

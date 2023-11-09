@@ -8,18 +8,18 @@ export default function Work() {
     { label: "Locomote", href: "/contact" },
   ];
   return (
-    <section className="my-20 px-20">
+    <section className="my-20 px-20 w-full">
       <div>
         <h4 className="font-light">Site that i created.</h4>
       </div>
       <div className="pt-5">
         {workItems.map((items, i) => (
-          <Link href={items.href} key={i}>
+          <Link href={items.href} target="_blank" key={i}>
             <div
               className={`flex items-center justify-between border-b border-gray-900 py-10 
               ${i === 0 ? "border-t" : ""}`}
             >
-              <h5 className="text-7xl">{items.label}</h5>
+              <h5 className="2xl:text-7xl">{items.label}</h5>
               <FiArrowUpRight size={40} />
             </div>
           </Link>

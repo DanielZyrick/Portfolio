@@ -10,9 +10,33 @@
     rgb(255 255 255) 69%,
     rgb(255 255 255) 100%
   );
-  width: 700px;
-  height: 700px;
+  width: 400px;
+  height: 400px;
   border-radius: 9999px;
   position: absolute;
   z-index: -1;
+}
+@media only screen and (min-width: 1536px) {
+  .bgRadial {
+    width: 700px;
+    height: 700px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bgRadial {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bgRadial {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .bgRadial {
+    width: 600px;
+    height: 600px;
+  }
 }

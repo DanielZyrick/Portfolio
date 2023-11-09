@@ -13,13 +13,13 @@ function Navbar() {
     { label: "Contact", href: "/contact" },
   ];
   return (
-    <div className="flex justify-between space-x-6 h-14 items-center mb-5 px-20 absolute w-full z-20">
+    <nav className="flex justify-between space-x-6 h-14 items-center px-20 absolute w-full z-20">
       <Link href="/" className="text-2xl">
         DG
       </Link>
       <ul className="flex space-x-6">
-        {navItems.map((item) => (
-          <li className="text-xl font-light" key={item.href}>
+        {navItems.map((item, i) => (
+          <li className="text-xl font-light" key={i}>
             <Link
               href={item.href}
               className={classNames({
@@ -33,7 +33,7 @@ function Navbar() {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 }
 
