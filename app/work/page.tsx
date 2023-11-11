@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 export default function page() {
   const workItems = [
-    { label: "Inked2600", href: "/about" },
+    { label: "Inked2600", href: "/https://inked2600.vercel.app/" },
     { label: "Emp", href: "/work" },
     { label: "Rig-out", href: "/contact" },
     { label: "Locomote", href: "/contact" },
@@ -21,7 +21,7 @@ export default function page() {
         </div>
         <div className="py-20">
           {workItems.map((items, i) => (
-            <Link href={items.href} key={i}>
+            <Link href={items.href} key={i} target="_blank">
               <div
                 className={`flex items-center justify-between border-b border-gray-900 py-10 
               ${i === 0 ? "border-t" : ""}`}
