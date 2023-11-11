@@ -1,14 +1,19 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="pt-14 relative mx-5 sm:mx-10 md:mx-20 h-screen">
-        <div className="pt-10 w-full">
+        <div className="pt-10 w-full h-full">
           <div className="flex flex-col items-center relative h-85 gap-y-10 sm:gap-y-20">
             <h2 className="text-4xl sm:text-6xl w-full lg:w-1/3 md:absolute left-0 top-0">
               ABOUT ME
@@ -31,13 +36,13 @@ export default function About() {
           </div>
         </div>
       </section>
-      {/* <section>
-        <div className="mb-20 px-20">
-          <h5 className="text-5xl w-2/5 font-light">
+      <section className="mx-5 sm:mx-10 md:mx-20">
+        <div className="my-28">
+          <h5 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4">
             driven by the simple objective of helping companies change the way
             we live.
           </h5>
-          <div className="w-full flex gap-20 pt-20">
+          <div className="w-full flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20">
             <Image
               src="/inked2600.jpg"
               width="0"
@@ -67,7 +72,7 @@ export default function About() {
             />
           </div>
         </div>
-      </section> */}
+      </section>
       <Services />
       <Contact />
       <Footer />

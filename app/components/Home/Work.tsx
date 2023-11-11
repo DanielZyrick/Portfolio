@@ -8,7 +8,7 @@ export default function Work() {
     { label: "Locomote", href: "/contact" },
   ];
   return (
-    <section className="m-5 sm:m-10 lg:m-20">
+    <section className="m-5 sm:m-10 md:m-20">
       <div>
         <h4 className="font-medium">Site that i created.</h4>
       </div>
@@ -26,11 +26,11 @@ export default function Work() {
             </div>
           </Link>
         ))}
-        {/* <div className="flex justify-center pt-16 ">
+        <div className="flex justify-center pt-16 ">
           <button className="w-56 h-20 rounded-full bg-gray-900 text-white text-lg">
-            Explore more
+            <Link href={"/work#top"}>Explore more</Link>
           </button>
-        </div> */}
+        </div>
       </div>
     </section>
   );
