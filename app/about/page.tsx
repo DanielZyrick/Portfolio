@@ -62,7 +62,7 @@ export default function About() {
               priority={true}
             />
             <Image
-              src="/Fi.jpg"
+              src="/Fi.JPG"
               width="0"
               height="0"
               sizes="100vw"
