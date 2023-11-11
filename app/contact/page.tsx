@@ -4,11 +4,13 @@ import Footer from "../components/Footer";
 export default function Contact() {
   return (
     <>
-      <section className="pt-14 relative h-fit sm:mx-10 md:mx-20">
+      <section className="py-14 relative h-fit mx-5 sm:mx-10 md:mx-20">
         <div className="pt-10">
-          <div className="flex justify-between ">
-            <h2 className="text-6xl w-1/4 ">ABOUT ME</h2>
-            <p className="text-4xl w-2/4 pt-20">
+          <div className="flex flex-col lg:flex-row justify-between ">
+            <h2 className="text-4xl sm:text-6xl lg:w-1/3 xl:w-1/2 ">
+              CONTACT ME
+            </h2>
+            <p className="text-2xl lg:text-4xl lg:w-2/3 xl:w-2/4 pt-20">
               I am always up for fresh connections and interesting discussions.
               The details listed below can be used to get in touch with me. I am
               happy to hear from you. If you would like to talk about exciting
@@ -17,9 +19,9 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div className="p-20 flex">
-          <div className="w-1/3">
-            <div className="mb-10 ">
+        <div className="flex gap-y-20 flex-col-reverse md:flex-row max-xl:justify-between pt-20">
+          <div className="flex max-[450px]:flex-col md:flex-col w-full md:w-1/3 gap-x-20">
+            <div className="mb-10">
               <p className="text-2xl mb-3">Contact Details</p>
               <address className="flex flex-col text-xl font-extralight gap-y-1">
                 <Link
@@ -64,7 +66,7 @@ export default function Contact() {
               </address>
             </div>
           </div>
-          <div className="w-2/4">
+          <div className="w-full md:w-2/4">
             <form
               action=""
               className="gap-y-10 flex flex-col justify-center items-center"
@@ -87,7 +89,7 @@ export default function Contact() {
                 required
                 placeholder="Your message"
               />
-              <button className="w-1/4 h-20 bg-gray-900 text-white text-xl rounded-full font-extralight">
+              <button className="w-36 h-36 bg-gray-900 text-white text-xl rounded-full font-extralight">
                 Send
               </button>
             </form>
