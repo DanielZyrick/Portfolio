@@ -3,6 +3,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 function Navbar() {
   const pathname = usePathname();
@@ -13,11 +14,14 @@ function Navbar() {
     { label: "Contact", href: "/contact" },
   ];
   return (
-    <nav className="flex justify-between space-x-6 h-14 items-center px-20 absolute w-full z-20">
+    <nav className="flex justify-between h-14 items-center px-5 sm:px-10 md:px-20 absolute w-full z-20 inline-flex">
       <Link href="/" className="text-2xl">
         DG
       </Link>
-      <ul className="flex space-x-6">
+      <div className="block md:hidden">
+        <RxHamburgerMenu size={24} />
+      </div>
+      <ul className="space-x-6 hidden md:flex">
         {navItems.map((item, i) => (
           <li className="text-xl font-light" key={i}>
             <Link

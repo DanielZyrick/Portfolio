@@ -10,8 +10,8 @@
     rgb(255 255 255) 69%,
     rgb(255 255 255) 100%
   );
-  width: 400px;
-  height: 400px;
+  width: 375px;
+  height: 375px;
   border-radius: 9999px;
   position: absolute;
   z-index: -1;
@@ -38,5 +38,10 @@
   .bgRadial {
     width: 600px;
     height: 600px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .bgRadial {
+    display: none;
   }
 }

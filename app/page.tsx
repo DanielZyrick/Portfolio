@@ -18,11 +18,11 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <HomeHero />
-      {/* <About /> */}
-      {/* <Services /> */}
-      {/* <Work /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <About />
+      <Services />
+      <Work />
+      <Contact />
+      <Footer />
     </main>
   );
 }
