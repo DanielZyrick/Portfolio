@@ -72,19 +72,19 @@ export default function Contact() {
               className="gap-y-10 flex flex-col justify-center items-center"
             >
               <input
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 placeholder:text-2xl font-extralight "
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 placeholder:text-2xl font-extralight focus:outline-none"
                 type="text"
                 placeholder="Your name"
                 required
               />
               <input
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 placeholder:text-2xl font-extralight"
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 placeholder:text-2xl font-extralight focus:outline-none"
                 type="email"
                 placeholder="Email"
                 required
               />
               <textarea
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 placeholder:text-2xl font-extralight "
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 placeholder:text-2xl font-extralight focus:outline-none"
                 rows={1}
                 required
                 placeholder="Your message"

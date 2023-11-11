@@ -27,7 +27,7 @@ export default function About() {
           <div>
             <Link
               href="/about#top"
-              className="text-white w-28 h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40 text-md sm:text-md xl:text-xl rounded-full bg-gray-950 flex justify-center items-center"
+              className="text-white w-28 h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40 text-md sm:text-md xl:text-xl rounded-full bg-gray-900 flex justify-center items-center"
             >
               About me
             </Link>
