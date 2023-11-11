@@ -15,7 +15,7 @@ const config: Config = {
       },
       height: {
         "90": "90vh",
-        "60": "60vh",
+        "85": "85vh",
       },
     },
   },

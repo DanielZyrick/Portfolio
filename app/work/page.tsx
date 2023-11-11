@@ -13,9 +13,9 @@ export default function page() {
   ];
   return (
     <>
-      <section className="pt-32 px-20 relative">
-        <div className="w-2/4 pb-20">
-          <h2 className="text-7xl font-light">
+      <section className="relative pt-24 mx-5 sm:mx-10 md:mx-20">
+        <div className="w-full min-[500px]:w-3/4 sm:w-2/3 lg:w-2/4 pb-20">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-light">
             Here is a small sampling of my top website.{" "}
           </h2>
         </div>
@@ -26,7 +26,9 @@ export default function page() {
                 className={`flex items-center justify-between border-b border-gray-900 py-10 
               ${i === 0 ? "border-t" : ""}`}
               >
-                <h5 className="text-7xl">{items.label}</h5>
+                <h5 className="text-3xl sm:text-5xl lg:text-7xl">
+                  {items.label}
+                </h5>
                 <FiArrowUpRight size={40} />
               </div>
             </Link>

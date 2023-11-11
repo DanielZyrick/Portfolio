@@ -4,8 +4,8 @@ import Footer from "../components/Footer";
 export default function Contact() {
   return (
     <>
-      <section className="pt-14 relative w-full h-fit">
-        <div className="px-20 pt-10">
+      <section className="pt-14 relative h-fit sm:mx-10 md:mx-20">
+        <div className="pt-10">
           <div className="flex justify-between ">
             <h2 className="text-6xl w-1/4 ">ABOUT ME</h2>
             <p className="text-4xl w-2/4 pt-20">

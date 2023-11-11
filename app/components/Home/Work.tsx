@@ -10,7 +10,7 @@ export default function Work() {
   return (
     <section className="m-5 sm:m-10 lg:m-20">
       <div>
-        <h4 className="font-light">Site that i created.</h4>
+        <h4 className="font-medium">Site that i created.</h4>
       </div>
       <div className="pt-5">
         {workItems.map((items, i) => (

@@ -3,7 +3,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 export default function Contact() {
   return (
-    <section className="my-10 w-full">
+    <section className="my-20 w-full">
       <div className="px-5 sm:px-10 lg:px-20 w-full overflow-hidden">
         <h5 className="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white font-outline-2 whitespace-nowrap">
           LET'S WORK TOGETHER - LET'S WORK TOGETHER - LET'S WORK TOGETHER
@@ -15,7 +15,7 @@ export default function Contact() {
         </h3>
       </div>
       <div className="flex max-[450px]:flex-col flex-row items-center justify-between mb-16 mx-5 sm:mx-10 lg:mx-20 gap-y-5">
-        <div className="flex flex-col items-center min-[450px]:items-start lg:flex-row text-lg sm:text-xl lg:text-2xl gap-5 lg:gap-10 sm:pt-0">
+        <div className="flex flex-col items-center min-[450px]:items-start lg:flex-row max-[450px]:text-sm text-lg sm:text-xl lg:text-2xl gap-5 lg:gap-10 sm:pt-0">
           <Link
             href="mailto:daniel.gayao7@gmail.com"
             className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5"
@@ -29,7 +29,7 @@ export default function Contact() {
             +63906 217 3558
           </Link>
         </div>
-        <div className="flex gap-1.5">
+        <div className="flex gap-1.5 max-[450px]:mt-5">
           <Link
             href="https://www.linkedin.com/in/daniel-gayao-9611a2207/"
             target="_blank"
