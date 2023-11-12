@@ -14,7 +14,6 @@ export default function ToggleIcon() {
   if (!mounted) return null;
 
   const currentTheme = theme === "system" ? systemTheme : theme;
-  console.log(currentTheme);
 
   return (
     <div className="flex">
