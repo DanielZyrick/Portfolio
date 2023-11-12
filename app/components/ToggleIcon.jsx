@@ -13,11 +13,12 @@ export default function ToggleIcon() {
 
   if (!mounted) return null;
 
-  const currentTHeme = theme === "system" ? systemTheme : theme;
+  const currentTheme = theme === "system" ? systemTheme : theme;
+  console.log(currentTheme);
 
   return (
     <div className="flex">
-      {currentTHeme === "dark" ? (
+      {currentTheme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
           className="text-xl text-white"
