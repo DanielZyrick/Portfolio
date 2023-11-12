@@ -72,24 +72,24 @@ export default function Contact() {
               className="gap-y-10 flex flex-col justify-center items-center"
             >
               <input
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 dark:border-white dark:bg-[#121212] placeholder:text-2xl font-extralight focus:outline-none"
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-bkg bg-ctxt placeholder:text-2xl font-light focus:outline-none"
                 type="text"
                 placeholder="Your name"
                 required
               />
               <input
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 dark:border-white dark:bg-[#121212] placeholder:text-2xl font-extralight focus:outline-none"
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-bkg bg-ctxt placeholder:text-2xl font-light focus:outline-none"
                 type="email"
                 placeholder="Email"
                 required
               />
               <textarea
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-gray-900 dark:border-white dark:bg-[#121212] placeholder:text-2xl font-extralight focus:outline-none"
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-bkg bg-ctxt placeholder:text-2xl font-light focus:outline-none"
                 rows={1}
                 required
                 placeholder="Your message"
               />
-              <button className="w-36 h-36 bg-gray-900 dark:bg-white text-white dark:text-black text-xl rounded-full">
+              <button className="w-36 h-36 text-xl rounded-full bg-bkg text-txt">
                 Send
               </button>
             </form>

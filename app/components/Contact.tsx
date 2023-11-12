@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section className="my-20 w-full">
       <div className="px-5 sm:px-10 md:px-20 w-full overflow-hidden">
-        <h5 className="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white font-outline-2 whitespace-nowrap">
+        <h5 className="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-ctxt font-outline-2 whitespace-nowrap">
           LET'S WORK TOGETHER - LET'S WORK TOGETHER - LET'S WORK TOGETHER
         </h5>
       </div>
@@ -51,7 +51,7 @@ export default function Contact() {
         <div className="border-t border-black w-full absolute z-0"></div>
         <Link
           href="/contact#top"
-          className="flex justify-center items-center w-36 h-36 lg:w-48 lg:h-48 rounded-full bg-gray-900 dark:bg-white text-white dark:text-black text-md lg:text-lg z-10"
+          className="flex justify-center items-center w-36 h-36 lg:w-48 lg:h-48 rounded-full text-md lg:text-lg z-10 bg-bkg text-txt font-medium"
         >
           Get in touch
         </Link>

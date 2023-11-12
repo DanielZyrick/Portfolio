@@ -2,26 +2,27 @@
   display: flex;
   flex-direction: column;
 }
-.bgRadial {
-  @media screen and (prefers-color-scheme: light) {
-    background: radial-gradient(
-      circle,
-      rgb(87 87 87) 0%,
-      rgb(119 119 119) 15%,
-      rgb(255 255 255) 69%,
-      rgb(255 255 255) 100%
-    );
-  }
+[data-theme="light"] .bgRadial {
+  background: radial-gradient(
+    circle,
+    rgb(87 87 87) 0%,
+    rgb(119 119 119) 15%,
+    rgb(255 255 255) 69%,
+    rgb(255 255 255) 100%
+  );
+}
 
-  @media screen and (prefers-color-scheme: dark) {
-    background: radial-gradient(
-      circle,
-      rgb(153 153 153) 0%,
-      rgb(119 119 119) 15%,
-      #121212 69%,
-      #00000000 100%
-    );
-  }
+[data-theme="dark"] .bgRadial {
+  background: radial-gradient(
+    circle,
+    rgb(153 153 153) 0%,
+    rgb(119 119 119) 15%,
+    #121212 69%,
+    #00000000 100%
+  );
+}
+
+.bgRadial {
   width: 375px;
   height: 375px;
   border-radius: 9999px;

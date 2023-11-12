@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import ToggleIcon from "./ToggleIcon";
 
 function Navbar() {
   const pathname = usePathname();
@@ -21,22 +22,26 @@ function Navbar() {
       <div className="block md:hidden">
         <RxHamburgerMenu size={24} />
       </div>
-      <ul className="space-x-6 hidden md:flex">
-        {navItems.map((item, i) => (
-          <li className="text-xl font-light" key={i}>
-            <Link
-              href={item.href}
-              className={classNames({
-                "underline underline-offset-8": item.href === pathname,
-                "hover:underline underline-offset-8": item.href !== pathname,
-                // "hover:text-zinc-900 transition-colors": true,
-              })}
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="flex justify-center items-center space-x-10 hidden md:flex">
+        <ul className="space-x-6  md:flex">
+          {navItems.map((item, i) => (
+            <li className="text-xl font-light" key={i}>
+              <Link
+                href={item.href}
+                className={classNames({
+                  "underline underline-offset-8": item.href === pathname,
+                  "hover:underline underline-offset-8": item.href !== pathname,
+                  // "hover:text-zinc-900 transition-colors": true,
+                })}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <ToggleIcon />
+      </div>
     </nav>
   );
 }
