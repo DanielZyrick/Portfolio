@@ -16,10 +16,10 @@
   @media screen and (prefers-color-scheme: dark) {
     background: radial-gradient(
       circle,
-      rgb(125 125 125) 0%,
+      rgb(153 153 153) 0%,
       rgb(119 119 119) 15%,
-      #141414 69%,
-      #212121 100%
+      #121212 69%,
+      #00000000 100%
     );
   }
   width: 375px;
