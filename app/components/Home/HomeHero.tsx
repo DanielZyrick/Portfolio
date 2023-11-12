@@ -21,7 +21,7 @@ export default function HomeHero() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col absolute bottom-4 sm:bottom-7 right-0 font-extralight text-md sm:text-lg lg:text-xl">
+        <div className="flex flex-col absolute bottom-4 sm:bottom-7 right-0 font-light text-md sm:text-lg lg:text-xl">
           <Link
             className="hover:underline decoration-1 underline-offset-8"
             href="https://instagram.com/dzyrick2"

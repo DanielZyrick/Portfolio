@@ -3,13 +3,25 @@
   flex-direction: column;
 }
 .bgRadial {
-  background: radial-gradient(
-    circle,
-    rgb(87 87 87) 0%,
-    rgb(119 119 119) 15%,
-    rgb(255 255 255) 69%,
-    rgb(255 255 255) 100%
-  );
+  @media screen and (prefers-color-scheme: light) {
+    background: radial-gradient(
+      circle,
+      rgb(87 87 87) 0%,
+      rgb(119 119 119) 15%,
+      rgb(255 255 255) 69%,
+      rgb(255 255 255) 100%
+    );
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    background: radial-gradient(
+      circle,
+      rgb(125 125 125) 0%,
+      rgb(119 119 119) 15%,
+      #141414 69%,
+      #212121 100%
+    );
+  }
   width: 375px;
   height: 375px;
   border-radius: 9999px;
