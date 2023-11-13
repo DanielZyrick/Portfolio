@@ -33,15 +33,21 @@ export default function Contact() {
           <Link
             href="https://www.linkedin.com/in/daniel-gayao-9611a2207/"
             target="_blank"
+            aria-label="Linkedin"
           >
             <BsLinkedin size={25} />
           </Link>
-          <Link href="https://instagram.com/dzyrick2" target="_blank">
+          <Link
+            href="https://instagram.com/dzyrick2"
+            target="_blank"
+            aria-label="Instagram"
+          >
             <AiFillInstagram size={25} />
           </Link>
           <Link
             href="https://www.facebook.com/daniel.zyrick?mibextid=LQQJ4d"
             target="_blank"
+            aria-label="Facebook"
           >
             <BsFacebook size={25} />
           </Link>
