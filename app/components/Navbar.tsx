@@ -23,7 +23,13 @@ function Navbar() {
         DG
       </Link>
       <div className="block md:hidden z-10">
-        <Hamburger toggled={isOpen} toggle={setOpen} size={24} duration={0.0} />
+        <Hamburger
+          toggled={isOpen}
+          toggle={setOpen}
+          size={24}
+          duration={0.0}
+          aria-label="HamburgerMenu"
+        />
       </div>
       {isOpen && (
         <div className="fixed md:hidden top-0 w-full h-screen z-0 bg-[#FFF] dark:bg-[#121212] px-0 animate-[reveal_.5s_ease-in-out] m-[-1.25rem] sm:m-[-2.25rem]">
