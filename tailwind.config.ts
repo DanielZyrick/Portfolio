@@ -23,6 +23,15 @@ const config: Config = {
         txt: "hsl(var(--txt-color) / <alpha-value>)",
         ctxt: "hsl(var(--c-text) / <alpha-value>)",
       },
+      keyframes: {
+        reveal: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        reveal: "reveal .5s ease-in-out",
+      },
     },
   },
 

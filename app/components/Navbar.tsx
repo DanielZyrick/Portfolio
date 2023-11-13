@@ -18,11 +18,7 @@ function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav
-      className={`flex justify-between h-14 items-center sm:px-10 md:px-20 px-5 absolute w-full z-20 inline-flex ${
-        isOpen == true ? "pl-0 pr-5 sm:pl-0 sm:pr-10" : ""
-      }`}
-    >
+    <nav className="flex justify-between h-14 items-center sm:px-10 md:px-20 px-5 absolute w-full z-20 inline-flex">
       <Link href="/" className="text-2xl">
         DG
       </Link>
@@ -30,31 +26,34 @@ function Navbar() {
         <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
       </div>
       {isOpen && (
-        <div className="fixed md:hidden top-0 w-full h-screen z-0 bg-[#FFF] dark:bg-[#121212] px-0">
+        <div className="fixed md:hidden top-0 w-full h-screen z-0 bg-[#FFF] dark:bg-[#121212] px-0 animate-[reveal_.5s_ease-in-out] m-[-1.25rem] sm:m-[-2.25rem]">
           <div className="flex flex-col justify-center items-center h-full gap-y-10 text-5xl ">
-            <div className="flex justify-center items-center">
+            <div className="pb-5">
               <ToggleIcon />
             </div>
             <div>
               <Link
-                href="/"
+                href="/about"
                 className="hover:underline decoration-1 underline-offset-[16px]"
+                onClick={() => setOpen(false)}
               >
                 About
               </Link>
             </div>
             <div>
               <Link
-                href="/"
+                href="/work"
                 className="hover:underline decoration-1 underline-offset-[16px]"
+                onClick={() => setOpen(false)}
               >
                 Work
               </Link>
             </div>
             <div>
               <Link
-                href="/"
+                href="/contact"
                 className="hover:underline decoration-1 underline-offset-[16px]"
+                onClick={() => setOpen(false)}
               >
                 Contact
               </Link>

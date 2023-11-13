@@ -11,6 +11,8 @@ export default function About() {
           alt="Daniel Image"
           className="rounded-3xl"
           priority={true}
+          placeholder="blur"
+          blurDataURL={"/1.jpg"}
         />
       </div>
       <div className="pt-10 sm:pt-0 lg:pt-10 sm:pl-12 lg:pt-0 lg:pl-24 w-full sm:w-2/3 xl:w-3/5">

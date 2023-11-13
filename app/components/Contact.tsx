@@ -51,7 +51,7 @@ export default function Contact() {
         <div className="border-t border-black w-full absolute z-0"></div>
         <Link
           href="/contact#top"
-          className="flex justify-center items-center w-36 h-36 lg:w-48 lg:h-48 rounded-full text-md lg:text-lg z-10 bg-bkg text-txt font-medium"
+          className="flex justify-center items-center w-36 h-36 lg:w-48 lg:h-48 rounded-full text-md lg:text-lg z-10 bg-[#121212] dark:bg-white text-white dark:text-black font-medium"
         >
           Get in touch
         </Link>

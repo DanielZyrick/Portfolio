@@ -27,7 +27,7 @@ export default function Work() {
           </Link>
         ))}
         <div className="flex justify-center pt-16 ">
-          <button className="w-56 h-20 rounded-full text-lg bg-bkg text-txt font-medium">
+          <button className="w-56 h-20 rounded-full text-lg bg-bkg dark:bg-white text-white dark:text-black font-medium">
             <Link href={"/work#top"}>Explore more</Link>
           </button>
         </div>

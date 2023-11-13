@@ -19,7 +19,7 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div className="flex gap-y-20 flex-col-reverse md:flex-row max-xl:justify-between pt-20">
+        <div className="flex gap-y-20 flex-col md:flex-row max-xl:justify-between pt-20">
           <div className="flex max-[450px]:flex-col md:flex-col w-full md:w-1/3 gap-x-20">
             <div className="mb-10">
               <p className="text-2xl mb-3">Contact Details</p>
@@ -72,24 +72,24 @@ export default function Contact() {
               className="gap-y-10 flex flex-col justify-center items-center"
             >
               <input
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-bkg bg-ctxt placeholder:text-2xl font-light focus:outline-none"
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-black dark:border-white bg-white dark:bg-[#121212] placeholder:text-2xl font-light focus:outline-none"
                 type="text"
                 placeholder="Your name"
                 required
               />
               <input
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-bkg bg-ctxt placeholder:text-2xl font-light focus:outline-none"
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-black dark:border-white bg-white dark:bg-[#121212] placeholder:text-2xl font-light focus:outline-none"
                 type="email"
                 placeholder="Email"
                 required
               />
               <textarea
-                className="w-full h-20 indent-5 py-3 text-2xl border-b border-bkg bg-ctxt placeholder:text-2xl font-light focus:outline-none"
+                className="w-full h-20 indent-5 py-3 text-2xl border-b border-black dark:border-white bg-white dark:bg-[#121212] placeholder:text-2xl font-light focus:outline-none"
                 rows={1}
                 required
                 placeholder="Your message"
               />
-              <button className="w-36 h-36 text-xl rounded-full bg-bkg text-txt">
+              <button className="w-36 h-36 text-xl rounded-full bg-bkg dark:bg-white text-white dark:text-black">
                 Send
               </button>
             </form>

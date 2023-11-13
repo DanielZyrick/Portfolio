@@ -32,6 +32,8 @@ export default function About() {
               className="w-3/5 sm:w-1/3 md:w-1/4 lg:w-1/5 md:absolute right-0 md:bottom-10 z-0"
               alt="Daniel Image"
               priority={true}
+              placeholder="blur"
+              blurDataURL={"/1.jpg"}
             />
           </div>
         </div>
