@@ -4,7 +4,9 @@ export default function Services() {
   return (
     <section className="mx-5 sm:mx-10 md:mx-20 my-20">
       <div className="mb-10">
-        <h3 className="text-4xl font-medium">Things i can do to help you</h3>
+        <span className="text-4xl font-medium">
+          Things i can do to help you
+        </span>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 xl:gap-x-12 2xl:p">
         <div>

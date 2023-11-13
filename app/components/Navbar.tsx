@@ -22,7 +22,7 @@ function Navbar() {
       <Link href="/" className="text-2xl">
         DG
       </Link>
-      <div className="block md:hidden z-10">
+      <div className="block md:hidden z-10" aria-label="HamburgerMenu">
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
