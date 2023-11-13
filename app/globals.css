@@ -20,7 +20,6 @@
   --c-text: 0 0% 100%;
 }
 :root[data-theme="dark"] {
-  /* Your default theme */
   --bg-color: 0 0% 100%;
   --txt-color: 0 0% 0%;
   --c-text: 0 0% 7%;

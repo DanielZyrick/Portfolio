@@ -2,8 +2,8 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
+import React, { useState } from "react";
+import { Squash as Hamburger } from "hamburger-react";
 import ToggleIcon from "./ToggleIcon";
 
 function Navbar() {
@@ -14,18 +14,58 @@ function Navbar() {
     { label: "Work", href: "/work" },
     { label: "Contact", href: "/contact" },
   ];
+
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <nav className="flex justify-between h-14 items-center px-5 sm:px-10 md:px-20 absolute w-full z-20 inline-flex">
+    <nav
+      className={`flex justify-between h-14 items-center sm:px-10 md:px-20 px-5 absolute w-full z-20 inline-flex ${
+        isOpen == true ? "pl-0 pr-5 sm:pl-0 sm:pr-10" : ""
+      }`}
+    >
       <Link href="/" className="text-2xl">
         DG
       </Link>
-      <div className="block md:hidden">
-        <RxHamburgerMenu size={24} />
+      <div className="block md:hidden z-10">
+        <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
       </div>
+      {isOpen && (
+        <div className="fixed md:hidden top-0 w-full h-screen z-0 bg-[#FFF] dark:bg-[#121212] px-0">
+          <div className="flex flex-col justify-center items-center h-full gap-y-10 text-5xl ">
+            <div className="flex justify-center items-center">
+              <ToggleIcon />
+            </div>
+            <div>
+              <Link
+                href="/"
+                className="hover:underline decoration-1 underline-offset-[16px]"
+              >
+                About
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="/"
+                className="hover:underline decoration-1 underline-offset-[16px]"
+              >
+                Work
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="/"
+                className="hover:underline decoration-1 underline-offset-[16px]"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="flex justify-center items-center space-x-10 hidden md:flex">
         <ul className="space-x-6  md:flex">
           {navItems.map((item, i) => (
-            <li className="text-xl font-light" key={i}>
+            <li className="text-lg font-light" key={i}>
               <Link
                 href={item.href}
                 className={classNames({

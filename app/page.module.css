@@ -23,7 +23,7 @@
 .bgRadial {
   width: 375px;
   height: 375px;
-  border-radius: 66% 33% 66% 33% / 33% 33% 66% 66%;
+  border-radius: 76% 13% 86% 43% / 33% 33% 66% 66%;
   position: absolute;
   background: radial-gradient(
     rgb(87 87 87) 0%,
