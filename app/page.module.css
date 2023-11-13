@@ -4,20 +4,18 @@
 }
 [data-theme="light"] .bgRadial {
   background: radial-gradient(
-    circle,
     rgb(87 87 87) 0%,
     rgb(119 119 119) 15%,
-    rgb(255 255 255) 69%,
+    rgb(93 93 93) 69%,
     rgb(255 255 255) 100%
   );
 }
 
 [data-theme="dark"] .bgRadial {
   background: radial-gradient(
-    circle,
     rgb(153 153 153) 0%,
     rgb(119 119 119) 15%,
-    #121212 69%,
+    #8d8d8d 69%,
     #00000000 100%
   );
 }
@@ -25,9 +23,36 @@
 .bgRadial {
   width: 375px;
   height: 375px;
-  border-radius: 9999px;
+  border-radius: 66% 33% 66% 33% / 33% 33% 66% 66%;
   position: absolute;
+  background: radial-gradient(
+    rgb(87 87 87) 0%,
+    rgb(119 119 119) 15%,
+    rgb(93 93 93) 69%,
+    rgb(255 255 255) 100%
+  );
   z-index: -1;
+  filter: blur(20px);
+  animation: border_animation 6s linear infinite;
+  -webkit-animation: border_animation 6s linear infinite;
+}
+@keyframes border_animation {
+  0%,
+  100% {
+    border-radius: 44% 56% 66% 66% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  33% {
+    border-radius: 66% 33% 44% 55% / 33% 22% 77% 66%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  66% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
 }
 @media only screen and (min-width: 1536px) {
   .bgRadial {

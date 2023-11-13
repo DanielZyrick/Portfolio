@@ -12,7 +12,7 @@ export default function HomeHero() {
         <span className="font-extralight">Junior Front-end Web Developer</span>
         <span className="font-extralight">Based in Philippines</span>
       </div>
-      <div className={`${styles.bgRadial} animate-pulse`}></div>
+      <div className={styles.bgRadial}></div>
       <div className="flex flex-col">
         <div className="absolute bottom-4 sm:bottom-7 left-0">
           <div className="w-12 md:w-24 lg:w-40 xl:w-48 2xl:w-60 h-auto">
