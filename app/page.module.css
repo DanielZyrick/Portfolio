@@ -21,8 +21,8 @@
 }
 
 .bgRadial {
-  width: 375px;
-  height: 375px;
+  width: 250px;
+  height: 250px;
   border-radius: 76% 13% 86% 43% / 33% 33% 66% 66%;
   position: absolute;
   background: radial-gradient(
@@ -56,29 +56,35 @@
 }
 @media only screen and (min-width: 1536px) {
   .bgRadial {
-    width: 700px;
-    height: 700px;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .bgRadial {
     width: 600px;
     height: 600px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
   .bgRadial {
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
   }
 }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
   .bgRadial {
-    width: 600px;
-    height: 600px;
+    width: 350px;
+    height: 350px;
   }
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .bgRadial {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .bgRadial {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 215px) {
   .bgRadial {
     display: none;
   }

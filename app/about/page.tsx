@@ -44,34 +44,36 @@ export default function About() {
             driven by the simple objective of helping companies change the way
             we live.
           </h5>
-          <div className="w-full flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20">
-            <Image
-              src="/inked2600.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt="inked2600 Image"
-              priority={true}
-            />
-            <Image
-              src="/Hilaga Studio.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt="Hilaga Studio Image"
-              priority={true}
-            />
-            <Image
-              src="/Fi.JPG"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt="Fi Image"
-              priority={true}
-            />
+          <div className="overlow-x-hidden">
+            <div className="w-full flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20 animate-[marquee_30s_linear_infinite]">
+              <Image
+                src="/inked2600.jpg"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "30%", height: "auto" }}
+                alt="inked2600 Image"
+                priority={true}
+              />
+              <Image
+                src="/Hilaga Studio.jpg"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "30%", height: "auto" }}
+                alt="Hilaga Studio Image"
+                priority={true}
+              />
+              <Image
+                src="/Fi.JPG"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "30%", height: "auto" }}
+                alt="Fi Image"
+                priority={true}
+              />
+            </div>
           </div>
         </div>
       </section>

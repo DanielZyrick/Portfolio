@@ -56,7 +56,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="flex items-center justify-center relative mb-10 mx-5 sm:mx-10 lg:mx-20">
-        <div className="border-t border-black w-full absolute z-0"></div>
+        <div className="border-t border-black dark:border-white w-full absolute z-0"></div>
         <Link
           href="/contact#top"
           className="flex justify-center items-center w-36 h-36 lg:w-48 lg:h-48 rounded-full text-md lg:text-lg z-10 bg-[#121212] dark:bg-white text-white dark:text-black font-medium"
