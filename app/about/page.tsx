@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -15,7 +15,7 @@ export default function About() {
   let xPercent = 0;
   let direction = -1;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -49,10 +49,13 @@ export default function About() {
     if (xPercent > 0) {
       xPercent = -100;
     }
-    gsap.set(sliderOne.current, { xPercent: xPercent });
-    gsap.set(sliderTwo.current, { xPercent: xPercent });
-    xPercent += 0.02 * direction;
-    requestAnimationFrame(animation);
+    let ctx = gsap.context(() => {
+      gsap.set(sliderOne.current, { xPercent: xPercent });
+      gsap.set(sliderTwo.current, { xPercent: xPercent });
+      xPercent += 0.02 * direction;
+      requestAnimationFrame(animation);
+    });
+    return () => ctx.revert();
   };
 
   return (

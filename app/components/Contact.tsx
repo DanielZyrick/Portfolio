@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 import gsap from "gsap";
@@ -11,7 +11,7 @@ export default function Contact() {
   let xPercent = 0;
   let direction = -1;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     requestAnimationFrame(animate);
   }, []);
 
