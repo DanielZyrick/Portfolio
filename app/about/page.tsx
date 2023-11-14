@@ -1,15 +1,56 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 export default function About() {
+  const sliderOne = useRef(null);
+  const sliderTwo = useRef(null);
+  const sliderContainer = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(sliderContainer.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+
+        scrub: 0.5,
+
+        start: 0,
+
+        end: window.innerHeight,
+
+        onUpdate: (e) => (direction = e.direction * -1),
+      },
+
+      x: "0",
+    });
+    requestAnimationFrame(animation);
   }, []);
+
+  const animation = () => {
+    if (xPercent < -100) {
+      xPercent = 0;
+    }
+    if (xPercent > 0) {
+      xPercent = -100;
+    }
+    gsap.set(sliderOne.current, { xPercent: xPercent });
+    gsap.set(sliderTwo.current, { xPercent: xPercent });
+    xPercent += 0.02 * direction;
+    requestAnimationFrame(animation);
+  };
+
   return (
     <>
       <section className="pt-14 relative mx-5 sm:mx-10 md:mx-20 h-screen">
@@ -38,20 +79,28 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="mx-5 sm:mx-10 md:mx-20">
-        <div className="my-28">
-          <h5 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4">
-            driven by the simple objective of helping companies change the way
-            we live.
-          </h5>
-          <div className="overlow-x-hidden">
-            <div className="w-full flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20 animate-[marquee_30s_linear_infinite]">
+      <section className="h-fit">
+        <div className="my-20">
+          <div className="mx-5 sm:mx-10 md:mx-20">
+            <h5 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4 2xl:w-2/3">
+              driven by the simple objective of helping companies change the way
+              we live.
+            </h5>
+          </div>
+          <div
+            className="overflow-hidden w-full h-[10rem] lg:h-[20rem] relative gap-x-5"
+            ref={sliderContainer}
+          >
+            <div
+              className="absolute top-0 left-0 w-full flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20 nowrap"
+              ref={sliderOne}
+            >
               <Image
                 src="/inked2600.jpg"
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "30%", height: "auto" }}
+                style={{ width: "28%", height: "auto" }}
                 alt="inked2600 Image"
                 priority={true}
               />
@@ -60,7 +109,7 @@ export default function About() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "30%", height: "auto" }}
+                style={{ width: "28%", height: "auto" }}
                 alt="Hilaga Studio Image"
                 priority={true}
               />
@@ -69,7 +118,39 @@ export default function About() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "30%", height: "auto" }}
+                style={{ width: "28%", height: "auto" }}
+                alt="Fi Image"
+                priority={true}
+              />
+            </div>
+            <div
+              className="absolute top-0 left-full w-full flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20 nowrap"
+              ref={sliderTwo}
+            >
+              <Image
+                src="/inked2600.jpg"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "28%", height: "auto" }}
+                alt="inked2600 Image"
+                priority={true}
+              />
+              <Image
+                src="/Hilaga Studio.jpg"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "28%", height: "auto" }}
+                alt="Hilaga Studio Image"
+                priority={true}
+              />
+              <Image
+                src="/Fi.JPG"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "28%", height: "auto" }}
                 alt="Fi Image"
                 priority={true}
               />

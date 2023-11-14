@@ -1,17 +1,49 @@
+"use client";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
+import gsap from "gsap";
+
 export default function Contact() {
+  const textOne = useRef(null);
+  const textTwo = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect(() => {
+    requestAnimationFrame(animate);
+  }, []);
+
+  const animate = () => {
+    if (xPercent < -100) {
+      xPercent = 0;
+    }
+    if (xPercent > 0) {
+      xPercent = -100;
+    }
+    gsap.set(textOne.current, { xPercent: xPercent });
+    gsap.set(textTwo.current, { xPercent: xPercent });
+    xPercent += 0.02 * direction;
+    requestAnimationFrame(animate);
+  };
+
   return (
     <section className="my-20 w-full relative">
-      <div className="px-5 sm:px-10 md:px-20 w-full overflow-hidden ">
-        <div className="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 dark:font-outline-2-dark whitespace-nowrap animate-[marquee_30s_linear_infinite]">
-          <span>
-            LET'S WORK TOGETHER - LET'S WORK TOGETHER - LET'S WORK TOGETHER -
+      <div className="w-full overflow-hidden ">
+        <div className="overflow-hidden w-full h-[10rem] relative text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 dark:font-outline-2-dark whitespace-nowrap">
+          <span ref={textOne} className="absolute whitespace-nowrap">
+            LET'S WORK TOGETHER - LET'S W
+          </span>
+          <span
+            ref={textTwo}
+            className="px-5 absolute left-full  whitespace-nowrap"
+          >
+            WORK TOGETHER - LET'S WORK
           </span>
         </div>
       </div>
-      <div className="mx-5 py-10 lg:pt-20 sm:mt-0 sm:mx-10 md:mx-20">
+      <div className="mx-5 py-10 lg:pt-20 sm:mt-0 sm:mx-10 md:mx-20 ">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light w-full sm:w-2/3 lg:w-1/3">
           Are you ready to take on the excitement?
         </h3>
