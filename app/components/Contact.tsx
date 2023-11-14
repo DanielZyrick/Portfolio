@@ -3,11 +3,13 @@ import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 export default function Contact() {
   return (
-    <section className="my-20 w-full">
-      <div className="px-5 sm:px-10 md:px-20 w-full overflow-hidden">
-        <h5 className="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-ctxt font-outline-2 whitespace-nowrap">
-          LET'S WORK TOGETHER - LET'S WORK TOGETHER - LET'S WORK TOGETHER
-        </h5>
+    <section className="my-20 w-full relative">
+      <div className="px-5 sm:px-10 md:px-20 w-full overflow-hidden ">
+        <div className="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 dark:font-outline-2-dark whitespace-nowrap animate-[marquee_30s_linear_infinite]">
+          <span>
+            LET'S WORK TOGETHER - LET'S WORK TOGETHER - LET'S WORK TOGETHER -
+          </span>
+        </div>
       </div>
       <div className="mx-5 py-10 lg:pt-20 sm:mt-0 sm:mx-10 md:mx-20">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light w-full sm:w-2/3 lg:w-1/3">

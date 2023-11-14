@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Services() {
   return (
-    <section className="mx-5 sm:mx-10 md:mx-20 my-20">
+    <section className="mx-5 sm:mx-10 md:mx-20 my-40">
       <div className="mb-10">
         <span className="text-4xl font-medium">
           Things i can do to help you

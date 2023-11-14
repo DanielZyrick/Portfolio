@@ -28,9 +28,14 @@ const config: Config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-169%)" },
+        },
       },
       animation: {
         reveal: "reveal .5s ease-in-out",
+        marquee: "marquee 30s linear infinite",
       },
     },
   },

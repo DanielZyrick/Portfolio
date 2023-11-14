@@ -39,6 +39,15 @@ function Navbar() {
             </div>
             <div>
               <Link
+                href="/"
+                className="hover:underline decoration-1 underline-offset-[16px]"
+                onClick={() => setOpen(false)}
+              >
+                Home
+              </Link>
+            </div>
+            <div>
+              <Link
                 href="/about"
                 className="hover:underline decoration-1 underline-offset-[16px]"
                 onClick={() => setOpen(false)}

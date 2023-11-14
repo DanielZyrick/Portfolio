@@ -6,7 +6,7 @@
   .font-outline-2 {
     -webkit-text-stroke: 1px black;
   }
-  [data-theme="dark"] .font-outline-2 {
+  .font-outline-2-dark {
     -webkit-text-stroke: 1px white;
   }
   .font-outline-4 {
