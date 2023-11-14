@@ -1,7 +1,15 @@
+"use client";
 import Link from "next/link";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
   return (
     <>
       <section className="py-14 relative h-fit mx-5 sm:mx-10 md:mx-20">

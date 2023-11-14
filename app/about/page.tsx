@@ -17,6 +17,10 @@ export default function About() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
 
     gsap.registerPlugin(ScrollTrigger);
 

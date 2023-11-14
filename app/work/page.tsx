@@ -1,10 +1,18 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function page() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   const workItems = [
     { label: "Inked2600", href: "/https://inked2600.vercel.app/" },
     { label: "Emp", href: "/work" },
