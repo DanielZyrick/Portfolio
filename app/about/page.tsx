@@ -40,7 +40,7 @@ export default function About() {
       x: "0",
     });
     requestAnimationFrame(animation);
-  }, []);
+  }, [sliderContainer.current]);
 
   const animation = () => {
     if (xPercent < -100) {
