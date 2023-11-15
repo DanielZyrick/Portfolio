@@ -11,23 +11,6 @@ export default function Contact() {
   let xPercent = 0;
   let way = -1;
 
-  useLayoutEffect(() => {
-    const animate = () => {
-      if (xPercent < -100) {
-        xPercent = 0;
-      }
-      if (xPercent > 0) {
-        xPercent = -100;
-      }
-      gsap.set(textOne.current, { xPercent: xPercent });
-      gsap.set(textTwo.current, { xPercent: xPercent });
-      xPercent += 0.02 * way;
-      requestAnimationFrame(animate);
-    };
-
-    requestAnimationFrame(animate);
-  }, []);
-
   return (
     <section className="my-20 w-full relative">
       <div className="w-full overflow-hidden ">
