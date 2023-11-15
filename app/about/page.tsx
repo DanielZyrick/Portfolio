@@ -43,22 +43,6 @@ export default function About() {
     requestAnimationFrame(animation);
   }, [sliderContainer.current]);
 
-  const animation = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    }
-    if (xPercent > 0) {
-      xPercent = -100;
-    }
-    let ctx = gsap.context(() => {
-      gsap.set(sliderOne.current, { xPercent: xPercent });
-      gsap.set(sliderTwo.current, { xPercent: xPercent });
-      xPercent += 0.02 * direction;
-      requestAnimationFrame(animation);
-    });
-    return () => ctx.revert();
-  };
-
   return (
     <>
       <section className="pt-14 relative mx-5 sm:mx-10 md:mx-20 h-screen">
