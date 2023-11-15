@@ -40,6 +40,23 @@ export default function About() {
 
       x: "0",
     });
+
+    const animation = () => {
+      if (xPercent < -100) {
+        xPercent = 0;
+      }
+      if (xPercent > 0) {
+        xPercent = -100;
+      }
+      let ctx = gsap.context(() => {
+        gsap.set(sliderOne.current, { xPercent: xPercent });
+        gsap.set(sliderTwo.current, { xPercent: xPercent });
+        xPercent += 0.02 * direction;
+        requestAnimationFrame(animation);
+      });
+      return () => ctx.revert();
+    };
+
     requestAnimationFrame(animation);
   }, [sliderContainer.current]);
 

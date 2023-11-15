@@ -9,22 +9,22 @@ export default function Contact() {
   const textOne = useRef(null);
   const textTwo = useRef(null);
   let xPercent = 0;
-  let direction = -1;
-
-  const animate = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    }
-    if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(textOne.current, { xPercent: xPercent });
-    gsap.set(textTwo.current, { xPercent: xPercent });
-    xPercent += 0.02 * direction;
-    requestAnimationFrame(animate);
-  };
+  let way = -1;
 
   useLayoutEffect(() => {
+    const animate = () => {
+      if (xPercent < -100) {
+        xPercent = 0;
+      }
+      if (xPercent > 0) {
+        xPercent = -100;
+      }
+      gsap.set(textOne.current, { xPercent: xPercent });
+      gsap.set(textTwo.current, { xPercent: xPercent });
+      xPercent += 0.02 * way;
+      requestAnimationFrame(animate);
+    };
+
     requestAnimationFrame(animate);
   }, []);
 
