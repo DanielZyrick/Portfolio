@@ -11,30 +11,34 @@ export default function Contact() {
   let xPerc = 0;
   let way = -1;
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const animate = () => {
-    if (xPerc < -100) {
-      xPerc = 0;
-    }
-    if (xPerc > 0) {
-      xPerc = -100;
-    }
-    gsap.set(textOne.current, { xPercent: xPerc });
-    // gsap.set(textTwo.current, { xPercent: xPerc });
-    xPerc += 0.02 * way;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    requestAnimationFrame(animate); // eslint-disable-line
-  };
-
   useLayoutEffect(() => {
-    gsap.to(animate.current, {
-      opacity: 1,
-      suppressHydrationWarning: true,
-      /* other animation properties */
-    });
-
     requestAnimationFrame(animate); // eslint-disable-line
   }, []);
+
+  let animate;
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  if (typeof window !== "undefined") {
+    window.onload = animate = () => {
+      if (xPerc < -100) {
+        xPerc = 0;
+      }
+      if (xPerc > 0) {
+        xPerc = -100;
+      }
+      if (textOne.current && textTwo.current) {
+        gsap.set(textOne.current, { xPercent: xPerc });
+        gsap.set(textTwo.current, { xPercent: xPerc });
+      }
+
+      xPerc += 0.02 * way;
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      if (textOne.current) {
+        requestAnimationFrame(animate);
+      }
+    };
+  }
 
   return (
     <section className="my-20 w-full relative">
