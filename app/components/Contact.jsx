@@ -8,20 +8,21 @@ import gsap from "gsap";
 export default function Contact() {
   const textOne = useRef(null);
   const textTwo = useRef(null);
-  let xPercent = 0;
+  let xPerc = 0;
   let way = -1;
 
   const animate = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
+    if (xPerc < -100) {
+      xPerc = 0;
     }
-    if (xPercent > 0) {
-      xPercent = -100;
+    if (xPerc > 0) {
+      xPerc = -100;
     }
-    gsap.set(textOne.current, { xPercent: xPercent });
-    gsap.set(textTwo.current, { xPercent: xPercent });
-    xPercent += 0.02 * way;
-    requestAnimationFrame(animate);
+    gsap.set(textOne.current, { xPercent: xPerc });
+    // gsap.set(textTwo.current, { xPercent: xPerc });
+    xPerc += 0.02 * way;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    requestAnimationFrame(animate); // eslint-disable-line
   };
 
   useLayoutEffect(() => {

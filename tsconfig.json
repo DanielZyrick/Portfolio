@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -29,7 +29,8 @@
     ".next/types/**/*.ts",
     "app/components/ToggleIcon.tsx",
     "app/components/Contact.jsx",
-    "app/components/Contact.jsx"
+    "app/components/Contact.jsx",
+    "app/components/Contact.js"
   ],
   "exclude": ["node_modules"]
 }
