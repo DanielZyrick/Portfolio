@@ -11,6 +11,7 @@ export default function Contact() {
   let xPerc = 0;
   let way = -1;
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const animate = () => {
     if (xPerc < -100) {
       xPerc = 0;
@@ -26,6 +27,12 @@ export default function Contact() {
   };
 
   useLayoutEffect(() => {
+    gsap.to(animate.current, {
+      opacity: 1,
+      suppressHydrationWarning: true,
+      /* other animation properties */
+    });
+
     requestAnimationFrame(animate);
   }, []);
 
