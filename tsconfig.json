@@ -27,7 +27,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/components/ToggleIcon.tsx"
+    "app/components/ToggleIcon.tsx",
+    "app/components/Contact.jsx",
+    "app/components/Contact.jsx"
   ],
   "exclude": ["node_modules"]
 }

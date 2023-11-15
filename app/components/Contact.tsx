@@ -3,25 +3,16 @@ import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
-import gsap from "gsap";
 
 export default function Contact() {
-  const textOne = useRef(null);
-  const textTwo = useRef(null);
-  let xPercent = 0;
-  let way = -1;
-
   return (
     <section className="my-20 w-full relative">
       <div className="w-full overflow-hidden ">
         <div className="overflow-hidden w-full h-[10rem] relative text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 dark:font-outline-2-dark whitespace-nowrap">
-          <span ref={textOne} className="absolute whitespace-nowrap">
+          <span className="absolute whitespace-nowrap">
             LET'S WORK TOGETHER - LET'S W
           </span>
-          <span
-            ref={textTwo}
-            className="px-5 absolute left-full  whitespace-nowrap"
-          >
+          <span className="px-5 absolute left-full  whitespace-nowrap">
             WORK TOGETHER - LET'S WORK
           </span>
         </div>
