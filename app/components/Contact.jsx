@@ -33,7 +33,7 @@ export default function Contact() {
       /* other animation properties */
     });
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animate); // eslint-disable-line
   }, []);
 
   return (
