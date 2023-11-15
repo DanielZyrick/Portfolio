@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React, { useLayoutEffect, useRef, useState } from "react";
 import ScrollTriggerSlide from "../components/About/ScrollTriggerSlide";
 import Services from "../components/Services";
 import Contact from "../components/Contact";

@@ -74,22 +74,28 @@ export default function Contact() {
               className="gap-y-10 flex flex-col justify-center items-center"
             >
               <input
+                name="name"
                 className="w-full h-20 indent-5 py-3 text-2xl border-b border-black dark:border-white bg-white dark:bg-[#121212] placeholder:text-2xl font-light focus:outline-none"
                 type="text"
                 placeholder="Your name"
+                autoComplete="given-name"
                 required
               />
               <input
+                name="email"
                 className="w-full h-20 indent-5 py-3 text-2xl border-b border-black dark:border-white bg-white dark:bg-[#121212] placeholder:text-2xl font-light focus:outline-none"
                 type="email"
                 placeholder="Email"
+                autoComplete="off"
                 required
               />
               <textarea
+                name="message"
                 className="w-full h-20 indent-5 py-3 text-2xl border-b border-black dark:border-white bg-white dark:bg-[#121212] placeholder:text-2xl font-light focus:outline-none"
                 rows={1}
-                required
                 placeholder="Your message"
+                autoComplete="your-message"
+                required
               />
               <button className="w-36 h-36 text-xl rounded-full bg-bkg dark:bg-white text-white dark:text-black">
                 Send
