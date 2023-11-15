@@ -11,10 +11,6 @@ export default function Contact() {
   let xPercent = 0;
   let direction = -1;
 
-  useLayoutEffect(() => {
-    requestAnimationFrame(animate);
-  }, []);
-
   const animate = () => {
     if (xPercent < -100) {
       xPercent = 0;
@@ -27,6 +23,10 @@ export default function Contact() {
     xPercent += 0.02 * direction;
     requestAnimationFrame(animate);
   };
+
+  useLayoutEffect(() => {
+    requestAnimationFrame(animate);
+  }, []);
 
   return (
     <section className="my-20 w-full relative">

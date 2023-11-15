@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -12,8 +12,9 @@ export default function About() {
   const sliderOne = useRef(null);
   const sliderTwo = useRef(null);
   const sliderContainer = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
+  let xPercent: number = 0;
+  // const [user, setUser] = useState<Number | null>(null);
+  let direction: number = -1;
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
