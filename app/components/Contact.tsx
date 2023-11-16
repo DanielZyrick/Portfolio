@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin, BsFacebook } from "react-icons/bs";
 import gsap from "gsap";
@@ -12,6 +12,10 @@ export default function Contact() {
   let way = -1;
 
   useLayoutEffect(() => {
+    gsap.set(textTwo.current, {
+      left: textTwo.current.getBoundingClientRect().width,
+    });
+
     requestAnimationFrame(animate); // eslint-disable-line
   }, []);
 
@@ -32,7 +36,7 @@ export default function Contact() {
         gsap.set(textTwo.current, { xPercent: xPerc });
       }
 
-      xPerc += 0.02 * way;
+      xPerc += 0.05 * way;
       // eslint-disable-next-line react-hooks/exhaustive-deps
       if (textOne.current) {
         requestAnimationFrame(animate);
@@ -44,14 +48,18 @@ export default function Contact() {
     <section className="my-20 w-full relative">
       <div className="w-full overflow-hidden ">
         <div className="overflow-hidden w-full h-[10rem] relative text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 dark:font-outline-2-dark whitespace-nowrap">
-          <span ref={textOne} className="absolute left-0 whitespace-nowrap">
-            LET'S WORK TOGETHER - LET'S W
+          <span
+            ref={textOne}
+            className="pr-5 absolute left-0 whitespace-nowrap"
+          >
+            LET'S WORK TOGETHER - LET'S WORK TOGETHER -
           </span>
           <span
             ref={textTwo}
-            className="px-5 absolute left-full whitespace-nowrap"
+            id="contactSecondTextWidth"
+            className="pr-5 absolute whitespace-nowrap"
           >
-            WORK TOGETHER - LET'S WORK
+            LET'S WORK TOGETHER - LET'S WORK TOGETHER -
           </span>
         </div>
       </div>

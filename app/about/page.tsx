@@ -4,8 +4,15 @@ import ScrollTriggerSlide from "../components/About/ScrollTriggerSlide";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
   return (
     <>
       <section className="pt-14 relative mx-5 sm:mx-10 md:mx-20 h-screen">
