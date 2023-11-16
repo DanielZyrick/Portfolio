@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";

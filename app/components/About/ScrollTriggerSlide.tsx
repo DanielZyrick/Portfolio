@@ -9,7 +9,7 @@ export default function ScrollTriggerSlide() {
   const imageContainerTwo = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
-  let direction = -1;
+  let direction = -1; // eslint-disable-line
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);

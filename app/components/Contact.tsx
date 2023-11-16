@@ -19,7 +19,7 @@ export default function Contact() {
     requestAnimationFrame(animate); // eslint-disable-line
   }, []);
 
-  let animate;
+  let animate; // eslint-disable-line
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
 
