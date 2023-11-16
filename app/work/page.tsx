@@ -5,7 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
-export default function page() {
+export default function Work() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
