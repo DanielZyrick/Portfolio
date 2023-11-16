@@ -10,7 +10,7 @@ export default function Contact() {
   const textTwo = useRef(null);
   let xPerc = 0;
   let way = -1;
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useLayoutEffect(() => {
     gsap.set(textTwo.current, {
       left: textTwo.current.getBoundingClientRect().width,

@@ -14,7 +14,7 @@ export default function Work() {
   }, []);
 
   const workItems = [
-    { label: "Inked2600", href: "/https://inked2600.vercel.app/" },
+    { label: "Inked2600", href: "https://inked2600.vercel.app/" },
     { label: "Emp", href: "/work" },
     { label: "Rig-out", href: "/contact" },
     { label: "Locomote", href: "/contact" },

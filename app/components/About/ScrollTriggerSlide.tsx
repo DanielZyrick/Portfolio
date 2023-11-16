@@ -12,8 +12,7 @@ export default function ScrollTriggerSlide() {
   let direction = -1; // eslint-disable-line
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
