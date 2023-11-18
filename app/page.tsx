@@ -31,7 +31,7 @@ export default function Home() {
       <Work />
       <Contact />
       <Footer />
-      <Cursor />
+      {/* <Cursor /> */}
     </main>
   );
 }

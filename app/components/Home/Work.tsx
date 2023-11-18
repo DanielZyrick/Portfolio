@@ -20,7 +20,7 @@ export default function Work() {
   console.log(modal);
   return (
     <>
-      <section className="m-5 sm:m-10 md:m-20" id="work-container">
+      <section className="m-5 sm:m-10 md:m-20 relative" id="work-container">
         <div>
           <h4 className="font-medium">Site that i created.</h4>
         </div>
@@ -51,7 +51,7 @@ export default function Work() {
           </div>
         </div>
       </section>
-      <WorkCursor modal={modal} workItems={workItems} />
+      {/* <WorkCursor modal={modal} workItems={workItems} /> */}
     </>
   );
 }
