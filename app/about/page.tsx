@@ -45,7 +45,7 @@ export default function About() {
       <Services />
       <Contact />
       <Footer />
-      <Cursor />
+      {/* <Cursor /> */}
     </>
   );
 }

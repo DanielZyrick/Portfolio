@@ -112,7 +112,7 @@ export default function Contact() {
         </div>
       </section>
       <Footer />
-      <Cursor />
+      {/* <Cursor /> */}
     </>
   );
 }
