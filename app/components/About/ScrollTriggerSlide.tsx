@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
@@ -11,7 +11,7 @@ export default function ScrollTriggerSlide() {
   let xPercent = 0;
   let direction = -1; // eslint-disable-line
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-de27
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
