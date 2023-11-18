@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import HomeHero from "./components/Home/HomeHero";
 import About from "./components/Home/About";
@@ -8,6 +8,12 @@ import Work from "./components/Home/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor/cursor";
+import WorkCursor from "./components/Cursor/WorkCursor";
+
+interface MyComponentProps {
+  setModal: (value: boolean) => void;
+  // other props...
+}
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +22,7 @@ export default function Home() {
       const locomotiveScroll = new LocomotiveScroll();
     })();
   }, []);
+
   return (
     <main className={styles.main}>
       <HomeHero />
@@ -24,7 +31,7 @@ export default function Home() {
       <Work />
       <Contact />
       <Footer />
-      <Cursor stickyElement={undefined} />
+      <Cursor />
     </main>
   );
 }

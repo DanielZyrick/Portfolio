@@ -2,23 +2,6 @@
   display: flex;
   flex-direction: column;
 }
-[data-theme="light"] .bgRadial {
-  background: radial-gradient(
-    rgb(87 87 87) 0%,
-    rgb(119 119 119) 15%,
-    rgb(93 93 93) 69%,
-    rgb(255 255 255) 100%
-  );
-}
-
-[data-theme="dark"] .bgRadial {
-  background: radial-gradient(
-    rgb(153 153 153) 0%,
-    rgb(119 119 119) 15%,
-    #8d8d8d 69%,
-    #00000000 100%
-  );
-}
 
 .bgRadial {
   width: 250px;
@@ -88,20 +71,4 @@
   .bgRadial {
     display: none;
   }
-}
-
-[data-theme="dark"] .cursor {
-  background-color: white;
-}
-[data-theme="light"] .cursor {
-  background-color: black;
-}
-
-.cursor {
-  position: fixed;
-  width: 15px;
-  height: 15px;
-  background-color: gray;
-  border-radius: 50%;
-  pointer-events: none;
 }

@@ -83,7 +83,7 @@ export default function ScrollTriggerSlide() {
               priority={true}
             />
             <Image
-              src="/Hilaga Studio.jpg"
+              src="/HilagaStudio.jpg"
               width="0"
               height="0"
               sizes="100vw"
@@ -115,7 +115,7 @@ export default function ScrollTriggerSlide() {
               priority={true}
             />
             <Image
-              src="/Hilaga Studio.jpg"
+              src="/HilagaStudio.jpg"
               width="0"
               height="0"
               sizes="100vw"

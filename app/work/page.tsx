@@ -46,7 +46,7 @@ export default function Work() {
       </section>
       <Contact />
       <Footer />
-      <Cursor stickyElement={undefined} />
+      <Cursor />
     </>
   );
 }

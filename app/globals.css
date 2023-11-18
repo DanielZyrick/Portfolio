@@ -12,23 +12,6 @@
   .font-outline-4 {
     -webkit-text-stroke: 4px black;
   }
-  [data-theme="light"] .bgRadial {
-    background: radial-gradient(
-      rgb(87 87 87) 0%,
-      rgb(119 119 119) 15%,
-      rgb(93 93 93) 69%,
-      rgb(255 255 255) 100%
-    ) !important;
-  }
-
-  [data-theme="dark"] .bgRadial {
-    background: radial-gradient(
-      rgb(153 153 153) 0%,
-      rgb(119 119 119) 15%,
-      #8d8d8d 69%,
-      #00000000 100%
-    ) !important;
-  }
 }
 :root {
   /* Your default theme */
