@@ -12,7 +12,7 @@ export default function ScrollTriggerSlide() {
   let direction = -1; // eslint-disable-line
 
   useLayoutEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-de27
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
@@ -70,7 +70,7 @@ export default function ScrollTriggerSlide() {
           ref={slider}
         >
           <div
-            className="absolute top-0 left-0 w-full pl-20 flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20 nowrap"
+            className="absolute top-0 left-0 w-full pt-5 flex justify-around w-full sm:pt-10 lg:pt-20 nowrap"
             ref={imageContainerOne}
           >
             <Image
@@ -102,7 +102,7 @@ export default function ScrollTriggerSlide() {
             />
           </div>
           <div
-            className="absolute top-0 w-full pl-20 flex gap-x-5 sm:gap-x-10 lg:gap-x-20 pt-5 sm:pt-10 lg:pt-20 nowrap"
+            className="absolute top-0 w-full flex justify-around pt-5 sm:pt-10 lg:pt-20 nowrap"
             ref={imageContainerTwo}
           >
             <Image

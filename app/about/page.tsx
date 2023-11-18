@@ -5,6 +5,7 @@ import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
+import Cursor from "../components/Cursor/cursor";
 
 export default function About() {
   useEffect(() => {
@@ -34,7 +35,6 @@ export default function About() {
               style={{ height: "auto" }}
               className="w-3/5 sm:w-1/3 md:w-1/4 lg:w-1/5 md:absolute right-0 md:bottom-10 z-0"
               alt="Daniel Image"
-              priority={true}
               placeholder="blur"
               blurDataURL={"/1.jpg"}
             />
@@ -45,6 +45,7 @@ export default function About() {
       <Services />
       <Contact />
       <Footer />
+      <Cursor stickyElement={undefined} />
     </>
   );
 }

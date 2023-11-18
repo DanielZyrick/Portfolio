@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Work from "./components/Home/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor/cursor";
 
 export default function Home() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function Home() {
       <Work />
       <Contact />
       <Footer />
+      <Cursor stickyElement={undefined} />
     </main>
   );
 }

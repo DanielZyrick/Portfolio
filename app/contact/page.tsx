@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
+import Cursor from "../components/Cursor/cursor";
 
 export default function Contact() {
   useEffect(() => {
@@ -111,6 +112,7 @@ export default function Contact() {
         </div>
       </section>
       <Footer />
+      <Cursor stickyElement={undefined} />
     </>
   );
 }
