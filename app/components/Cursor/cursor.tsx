@@ -6,7 +6,9 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 export default function cursor() {
   const cursorSize = 15;
   const mouse = {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     x: useMotionValue(0),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     y: useMotionValue(0),
   };
 
