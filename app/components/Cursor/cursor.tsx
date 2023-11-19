@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import styles from "@/app/components/Cursor/style.module.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
@@ -16,11 +16,11 @@ export default function Cursor() {
     y: useSpring(mouse.y, smoothOptions),
   };
 
-  const manageMouseMove = (e: any) => {
+  const manageMouseMove = useCallback((e: any) => {
     const { clientX, clientY } = e;
     mouse.x.set(clientX - cursorSize / 2);
     mouse.y.set(clientY - cursorSize / 2);
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("mousemove", manageMouseMove);
