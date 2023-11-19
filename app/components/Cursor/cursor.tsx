@@ -16,7 +16,7 @@ export default function Cursor() {
     y: useSpring(mouse.y, smoothOptions),
   };
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: any) => {
     const { clientX, clientY } = e;
     mouse.x.set(clientX - cursorSize / 2);
     mouse.y.set(clientY - cursorSize / 2);
