@@ -16,14 +16,11 @@ export default function Cursor() {
     y: useSpring(mouse.y, smoothOptions),
   };
 
-  const manageMouseMove = useCallback(
-    (e) => {
-      const { clientX, clientY } = e;
-      mouse.x.set(clientX - cursorSize / 2);
-      mouse.y.set(clientY - cursorSize / 2);
-    },
-    [mouse.x, mouse.y]
-  );
+  const manageMouseMove = useCallback((e) => {
+    const { clientX, clientY } = e;
+    mouse.x.set(clientX - cursorSize / 2);
+    mouse.y.set(clientY - cursorSize / 2);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("mousemove", manageMouseMove);
