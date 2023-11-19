@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Cursor from "../components/Cursor/Cursor";
+import Cursor from "../components/Cursor/cursor";
 
 export default function Work() {
   useEffect(() => {
