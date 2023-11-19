@@ -17,7 +17,6 @@ const workItems = [
 
 export default function Work() {
   const [modal, setModal] = useState({ active: false, i: 0 });
-  console.log(modal);
   return (
     <>
       <section className="m-5 sm:m-10 md:m-20 relative" id="work-container">
