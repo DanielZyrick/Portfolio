@@ -17,7 +17,7 @@ export default function Contact() {
     });
 
     requestAnimationFrame(animate); // eslint-disable-line
-  }, []);
+  }, [animate]);
 
   let animate; // eslint-disable-line
 

@@ -12,7 +12,7 @@ export default function ScrollTriggerSlide() {
   let direction = -1; // eslint-disable-line
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-de27
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
@@ -30,7 +30,7 @@ export default function ScrollTriggerSlide() {
     });
 
     requestAnimationFrame(animate); // eslint-disable-line
-  }, []);
+  }, [direction]);
 
   let animate;
 
