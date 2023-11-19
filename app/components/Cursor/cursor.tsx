@@ -5,10 +5,9 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function cursor() {
   const cursorSize = 15;
-  const motionValue = useMotionValue(0);
   const mouse = {
-    x: motionValue,
-    y: motionValue,
+    x: useMotionValue(0),
+    y: useMotionValue(0),
   };
 
   const smoothOptions = { damping: 25, stiffness: 200, mass: 0.5 };
@@ -28,7 +27,7 @@ export default function cursor() {
     return () => {
       window.removeEventListener("mousemove", manageMouseMove);
     };
-  }, []);
+  }, [manageMouseMove]);
   return (
     <>
       <motion.div
