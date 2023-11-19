@@ -5,7 +5,7 @@ import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import Cursor from "../components/Cursor/Cursor";
+import Cursor from "../components/Cursor/cursor";
 
 export default function About() {
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function About() {
       <Services />
       <Contact />
       <Footer />
-      {/* <Cursor /> */}
+      <Cursor />
     </>
   );
 }
