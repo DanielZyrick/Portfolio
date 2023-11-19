@@ -15,9 +15,9 @@ export default function Contact() {
     gsap.set(textTwo.current, {
       left: textTwo.current.getBoundingClientRect().width,
     });
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     requestAnimationFrame(animate); // eslint-disable-line
-  }, [animate]);
+  }, []);
 
   let animate; // eslint-disable-line
 
