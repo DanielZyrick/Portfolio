@@ -16,15 +16,15 @@ export default function Contact() {
       left: textTwo.current.getBoundingClientRect().width,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    requestAnimationFrame(animate); // eslint-disable-line
+    requestAnimationFrame(animation); // eslint-disable-line
   }, []);
 
-  let animate; // eslint-disable-line
+  let animation; // eslint-disable-line
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
 
   if (typeof window !== "undefined") {
-    window.onload = animate = () => {
+    window.onload = animation = () => {
       if (xPerc < -100) {
         xPerc = 0;
       }
@@ -39,7 +39,7 @@ export default function Contact() {
       xPerc += 0.05 * way;
       // eslint-disable-next-line react-hooks/exhaustive-deps
       if (textOne.current) {
-        requestAnimationFrame(animate);
+        requestAnimationFrame(animation);
       }
     };
   }

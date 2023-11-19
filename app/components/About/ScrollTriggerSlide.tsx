@@ -20,7 +20,8 @@ export default function ScrollTriggerSlide() {
         scrub: 0.25,
         start: 0,
         end: window.innerHeight,
-        onUpdate: (e) => (direction = e.direction * -1),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        onUpdate: (e) => (direction = e.direction * -1), // eslint-disable-line
       },
       x: "0",
     });
@@ -30,7 +31,7 @@ export default function ScrollTriggerSlide() {
     });
 
     requestAnimationFrame(animate); // eslint-disable-line
-  }, [direction]);
+  }, []);
 
   let animate;
 
