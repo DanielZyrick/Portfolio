@@ -37,4 +37,3 @@ function Cursor() {
     </>
   );
 }
-export default Cursor;
