@@ -19,7 +19,10 @@ export default function Work() {
   const [modal, setModal] = useState({ active: false, i: 0 });
   return (
     <>
-      <section className="m-5 sm:m-10 md:m-20 relative" id="work-container">
+      <section
+        className="p-5 sm:p-10 md:p-20 relative h-full"
+        id="work-container"
+      >
         <div>
           <h4 className="font-medium">Site that i created.</h4>
         </div>
@@ -49,8 +52,8 @@ export default function Work() {
             </button>
           </div>
         </div>
+        <WorkCursor modal={modal} workItems={workItems} />
       </section>
-      {/* <WorkCursor modal={modal} workItems={workItems} /> */}
     </>
   );
 }
