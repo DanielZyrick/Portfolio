@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import styles from "@/app/components/Cursor/style.module.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-export default function Cursor() {
+function Cursor() {
   const cursorSize = 15;
   const mouse = {
     x: useMotionValue(0),
@@ -37,3 +37,4 @@ export default function Cursor() {
     </>
   );
 }
+export default Cursor;
