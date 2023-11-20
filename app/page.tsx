@@ -8,7 +8,7 @@ import Work from "./components/Home/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WorkCursor from "./components/Cursor/WorkCursor";
-import Cursor from "@/app/components/Cursor/cursor";
+import Cursor from "./components/Cursor/Cursor";
 
 interface MyComponentProps {
   setModal: (value: boolean) => void;

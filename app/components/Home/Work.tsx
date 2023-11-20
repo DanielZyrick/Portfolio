@@ -10,9 +10,9 @@ const workItems = [
     src: "inked2600.jpg",
     color: "#FFFFFF",
   },
-  { label: "Emp", href: "/", src: "Hilaga Studio.jpg", color: "#111111" },
+  { label: "Emp", href: "/", src: "HilagaStudio.jpg", color: "#111111" },
   { label: "Rig-out", href: "/", src: "Fi.jpg", color: "#eb4034" },
-  { label: "Locomote", href: "/", src: "Hilaga Studio.jpg", color: "#3496eb" },
+  { label: "Locomote", href: "/", src: "HilagaStudio.jpg", color: "#3496eb" },
 ];
 
 export default function Work() {
@@ -20,7 +20,7 @@ export default function Work() {
   return (
     <>
       <section
-        className="p-5 sm:p-10 md:p-20 relative h-full"
+        className="p-5 sm:p-10 md:p-20 relative h-full overflow-hidden"
         id="work-container"
       >
         <div>

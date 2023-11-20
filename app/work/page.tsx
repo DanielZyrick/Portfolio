@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Cursor from "../components/Cursor/cursor";
+import Cursor from "../components/Cursor/Cursor";
 
 export default function Work() {
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function Work() {
           {workItems.map((items, i) => (
             <Link href={items.href} key={i} target="_blank">
               <div
-                className={`flex items-center justify-between border-b border-gray-900 py-10 
+                className={`flex items-center justify-between border-b border-gray-900 py-10 transition-all duration-200 ease-linear delay-100 hover:opacity-50
               ${i === 0 ? "border-t" : ""}`}
               >
                 <h5 className="text-3xl sm:text-5xl lg:text-7xl">

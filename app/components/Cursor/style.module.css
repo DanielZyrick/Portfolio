@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
+  border: 1px #111111 solid;
 }
 .modalSlider {
   height: 100%;
