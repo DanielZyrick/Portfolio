@@ -5,7 +5,6 @@ import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import Cursor from "../components/Cursor/Cursor";
 
 export default function About() {
   useEffect(() => {
