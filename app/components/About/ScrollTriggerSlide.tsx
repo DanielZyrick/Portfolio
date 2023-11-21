@@ -60,7 +60,7 @@ export default function ScrollTriggerSlide() {
   return (
     <section className="h-fit">
       <div className="my-20">
-        <div className="mx-5 sm:mx-10 md:mx-20">
+        <div className="mx-5 sm:mx-10 md:mx-20 pb-5 sm:pb-10 lg:pb-20">
           <h5 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4 2xl:w-2/3">
             driven by the simple objective of helping companies change the way
             we live.
@@ -71,7 +71,7 @@ export default function ScrollTriggerSlide() {
           ref={slider}
         >
           <div
-            className="absolute top-0 left-0 w-full pt-5 flex justify-around w-full sm:pt-10 lg:pt-20 nowrap"
+            className="absolute top-0 left-0 w-full flex justify-around w-full nowrap object-cover"
             ref={imageContainerOne}
           >
             <Image
@@ -103,7 +103,7 @@ export default function ScrollTriggerSlide() {
             />
           </div>
           <div
-            className="absolute top-0 w-full flex justify-around pt-5 sm:pt-10 lg:pt-20 nowrap"
+            className="absolute top-0 w-full flex justify-around nowrap object-cover"
             ref={imageContainerTwo}
           >
             <Image
