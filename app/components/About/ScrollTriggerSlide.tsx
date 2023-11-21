@@ -93,7 +93,7 @@ export default function ScrollTriggerSlide() {
               priority={true}
             />
             <Image
-              src="/Fi.JPG"
+              src="/Fi.jpg"
               width="0"
               height="0"
               sizes="100vw"
@@ -125,7 +125,7 @@ export default function ScrollTriggerSlide() {
               priority={true}
             />
             <Image
-              src="/Fi.JPG"
+              src="/Fi.jpg"
               width="0"
               height="0"
               sizes="100vw"
