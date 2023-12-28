@@ -9,7 +9,7 @@ export default function About() {
           width={500}
           height={750}
           alt="Daniel Image"
-          className="rounded-3xl"
+          className=""
           priority={true}
           placeholder="blur"
           blurDataURL={"/1.jpg"}
