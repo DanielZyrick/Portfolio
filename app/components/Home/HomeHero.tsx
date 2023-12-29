@@ -10,7 +10,7 @@ export default function HomeHero() {
       </div>
       <div className="flex flex-col text-center items-center 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl">
         <span className="font-extralight">Junior Front-End Web Developer</span>
-        <span className="font-extralight">Based in Philippines</span>
+        <span className="font-extralight">Based in the Philippines</span>
       </div>
       <div className={` ${styles.bgRadial}`}></div>
       <div className="flex flex-col">
