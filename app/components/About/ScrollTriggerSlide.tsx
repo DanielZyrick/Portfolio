@@ -59,7 +59,7 @@ export default function ScrollTriggerSlide() {
   }
   return (
     <section className="max-w-[1920px] w-full m-auto">
-      <div className="my-5 lg:my-20">
+      <div className="my-5 lg:my-10">
         <div className="mx-5 sm:mx-10 md:mx-20 pb-5 sm:pb-10 lg:pb-20">
           <h5 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4 2xl:w-2/3">
             driven by the simple objective of helping companies change the way
@@ -67,7 +67,7 @@ export default function ScrollTriggerSlide() {
           </h5>
         </div>
         <div
-          className="overflow-hidden h-[10rem] lg:h-[20rem] relative"
+          className="overflow-hidden h-[12rem] lg:h-[15rem] xl:h-[18rem] invisible sm:visible relative"
           ref={slider}
         >
           <div

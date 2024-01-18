@@ -17,7 +17,7 @@ export default function About() {
   return (
     <>
       <section className="max-w-[1920px] w-full max-h-[940px] h-screen m-auto">
-        <div className="pt-14 relative mx-5 sm:mx-10 md:mx-20 h-screen">
+        <div className="pt-14 relative mx-5 sm:mx-10 md:mx-20 h-full">
           <div className="pt-10 w-full h-full" id="top">
             <div className="flex flex-col items-center relative h-full gap-y-10 sm:gap-y-20">
               <h2 className="text-4xl sm:text-6xl w-full lg:w-1/3 md:absolute left-0 top-0">
