@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Services() {
   return (
-    <section className="max-w-[1920px] w-full px-5 sm:px-10 md:px-20 lg:py-40 m-auto">
+    <section className="max-w-[1920px] w-full px-5 sm:px-10 md:px-20 lg:py-30 m-auto">
       <div className="mb-10">
         <span className="text-4xl font-medium">
           Things i can do to help you

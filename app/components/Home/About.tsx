@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function About() {
   return (
-    <section className="flex flex-col sm:flex-row justify-center max-w-[1920px] w-full items-center px-5 sm:px-10 md:px-20 xl:px-56 pt-36 pb-20 m-auto">
+    <section className="flex flex-col sm:flex-row justify-center max-w-[1920px] w-full items-center px-5 sm:px-10 md:px-20 xl:px-56 pt-36 pb-36 m-auto">
       <div className="w-3/4 sm:w-1/3 xl:w-2/5">
         <Image
           src="/1.jpg"
