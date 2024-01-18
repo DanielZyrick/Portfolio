@@ -20,7 +20,7 @@ export default function Work() {
   return (
     <>
       <section
-        className="p-5 sm:p-10 md:p-20 relative h-full overflow-hidden"
+        className="p-5 sm:p-10 md:p-20 relative max-w-[1920px] w-full overflow-hidden m-auto"
         id="work-container"
       >
         <div>

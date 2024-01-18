@@ -22,7 +22,7 @@ export default function Work() {
   ];
   return (
     <>
-      <section className="relative pt-24 mx-5 sm:mx-10 md:mx-20">
+      <section className="max-w-[1920px] w-full relative pt-24 px-5 sm:px-10 md:px-20 m-auto">
         <div className="w-full min-[500px]:w-3/4 sm:w-2/3 lg:w-2/4 pb-20">
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-light">
             Here is a small sampling of my top website.{" "}

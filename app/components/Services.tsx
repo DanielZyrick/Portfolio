@@ -2,13 +2,13 @@ import React from "react";
 
 export default function Services() {
   return (
-    <section className="mx-5 sm:mx-10 md:mx-20 lg:my-40">
+    <section className="max-w-[1920px] w-full px-5 sm:px-10 md:px-20 lg:py-40 m-auto">
       <div className="mb-10">
         <span className="text-4xl font-medium">
           Things i can do to help you
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 xl:gap-x-12 2xl:p">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 xl:gap-x-12 2xl:p">
         <div>
           <div className="flex items-end gap-5 border-b border-gray-900 w-fit pr-5 pb-1 mb-3">
             <span>01</span>

@@ -13,7 +13,7 @@ export default function Contact() {
   }, []);
   return (
     <>
-      <section className="py-14 relative h-fit mx-5 sm:mx-10 md:mx-20">
+      <section className="max-w-[1920px] w-full py-14 relative h-fit px-5 sm:px-10 md:px-20 m-auto">
         <div className="pt-10">
           <div className="flex flex-col lg:flex-row justify-between ">
             <h2 className="text-4xl sm:text-6xl lg:w-1/3 xl:w-1/2 ">

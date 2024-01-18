@@ -46,7 +46,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="my-20 w-full relative">
+    <section className="my-20 w-full relative max-w-[1920px] m-auto">
       <div className="w-full overflow-hidden ">
         <div className="overflow-hidden w-full h-[10rem] relative text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 dark:font-outline-2-dark whitespace-nowrap">
           <span

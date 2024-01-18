@@ -58,7 +58,7 @@ export default function ScrollTriggerSlide() {
     };
   }
   return (
-    <section className="h-fit">
+    <section className="max-w-[1920px] w-full max-h-[940px] m-auto">
       <div className="my-20">
         <div className="mx-5 sm:mx-10 md:mx-20 pb-5 sm:pb-10 lg:pb-20">
           <h5 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4 2xl:w-2/3">
