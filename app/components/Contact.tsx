@@ -73,13 +73,13 @@ export default function Contact() {
         <div className="flex flex-col items-center min-[450px]:items-start lg:flex-row max-[450px]:text-sm text-lg sm:text-xl lg:text-2xl gap-5 lg:gap-10 sm:pt-0">
           <Link
             href="mailto:daniel.gayao7@gmail.com"
-            className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5"
+            className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5 hover:bg-zinc-700 hover:text-white"
           >
             daniel.gayao7@gmail.com
           </Link>
           <Link
             href="tel:+639062173558"
-            className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5"
+            className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5 hover:bg-zinc-700 hover:text-white"
           >
             +63906 217 3558
           </Link>
@@ -112,7 +112,7 @@ export default function Contact() {
         <div className="border-t border-black dark:border-white w-full absolute z-0"></div>
         <Link
           href="/contact#top"
-          className="flex justify-center items-center w-36 h-36 lg:w-48 lg:h-48 rounded-full text-md lg:text-lg z-10 bg-[#121212] dark:bg-white text-white dark:text-black font-medium"
+          className="flex justify-center items-center w-36 h-36 lg:w-48 lg:h-48 rounded-full text-md lg:text-lg z-10 bg-[#121212] dark:bg-white text-white dark:text-black font-medium hover:bg-zinc-700 dark:hover:bg-zinc-300"
         >
           Get in touch
         </Link>

@@ -27,12 +27,14 @@ export default function About() {
             design, coding, and interaction.
           </p>
           <div>
-            <Link
-              href="/about#top"
-              className="w-28 h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40 text-md sm:text-md xl:text-xl rounded-full  flex justify-center items-center bg-bkg dark:bg-white text-txt dark:text-black  font-medium"
-            >
-              About me
-            </Link>
+            <button>
+              <Link
+                href="/about#top"
+                className="w-28 h-28 lg:w-32 lg:h-32 xl:w-40 xl:h-40 text-md sm:text-md xl:text-xl rounded-full flex justify-center items-center bg-bkg dark:bg-white text-txt dark:text-black  font-medium hover:bg-zinc-700 dark:hover:bg-zinc-300"
+              >
+                About me
+              </Link>
+            </button>
           </div>
         </div>
       </div>

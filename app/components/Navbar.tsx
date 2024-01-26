@@ -18,7 +18,7 @@ function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav className="max-w-[1920px] w-full m-auto">
+    <header className="max-w-[1920px] w-full m-auto">
       <div className="flex justify-between h-14 items-center absolute z-20 sm:px-10 md:px-20 px-5 max-w-[1920px] w-full">
         <Link href="/" className="text-2xl">
           DG
@@ -99,7 +99,7 @@ function Navbar() {
           <ToggleIcon />
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 

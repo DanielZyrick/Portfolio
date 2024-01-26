@@ -20,7 +20,7 @@ export default function Work() {
   return (
     <>
       <section
-        className="p-5 sm:p-10 md:p-20 relative max-w-[1920px] w-full overflow-hidden m-auto"
+        className="p-5 sm:p-10 md:p-20 mt-24 lg:mt-0 relative max-w-[1920px] w-full overflow-hidden m-auto"
         id="work-container"
       >
         <div>
@@ -47,7 +47,7 @@ export default function Work() {
             </Link>
           ))}
           <div className="flex justify-center pt-16 ">
-            <button className="w-56 h-20 rounded-full text-lg bg-bkg dark:bg-white text-white dark:text-black font-medium">
+            <button className="w-56 h-20 rounded-full text-lg bg-bkg dark:bg-white text-white dark:text-black font-medium hover:bg-zinc-700 dark:hover:bg-zinc-300">
               <Link href={"/work#top"}>Explore more</Link>
             </button>
           </div>

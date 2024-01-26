@@ -104,7 +104,7 @@ export default function Contact() {
                 autoComplete="your-message"
                 required
               />
-              <button className="w-36 h-36 text-xl rounded-full bg-bkg dark:bg-white text-white dark:text-black">
+              <button className="w-36 h-36 text-xl rounded-full bg-bkg dark:bg-white text-white dark:text-black hover:bg-zinc-700 dark:hover:bg-zinc-300">
                 Send
               </button>
             </form>
