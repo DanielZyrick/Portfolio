@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={raleway.className}>
+      <body className={`dark:bg-[#121212] ${raleway.className}`}>
         <Providers>
           <Navbar />
           {children}
