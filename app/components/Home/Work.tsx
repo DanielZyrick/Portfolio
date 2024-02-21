@@ -11,8 +11,8 @@ const workItems = [
     color: "#FFFFFF",
   },
   { label: "Emp", href: "/", src: "HilagaStudio.jpg", color: "#111111" },
-  { label: "Rig-out", href: "/", src: "Fi.jpg", color: "#eb4034" },
-  { label: "Locomote", href: "/", src: "HilagaStudio.jpg", color: "#3496eb" },
+  { label: "Rig-out", href: "/", src: "Fi.jpg", color: "#FFFFFF" },
+  { label: "Locomote", href: "/", src: "HilagaStudio.jpg", color: "#111111" },
 ];
 
 export default function Work() {
