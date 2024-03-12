@@ -5,6 +5,12 @@ import WorkCursor from "../Cursor/WorkCursor";
 
 const workItems = [
   {
+    label: "Locomote",
+    href: "https://locomote.vercel.app/",
+    src: "locomote.jpg",
+    color: "#111111",
+  },
+  {
     label: "Inked2600",
     href: "https://inked2600.vercel.app/",
     src: "inked2600.jpg",
@@ -12,7 +18,6 @@ const workItems = [
   },
   { label: "Emp", href: "/", src: "HilagaStudio.jpg", color: "#111111" },
   { label: "Rig-out", href: "/", src: "Fi.jpg", color: "#FFFFFF" },
-  { label: "Locomote", href: "/", src: "HilagaStudio.jpg", color: "#111111" },
 ];
 
 export default function Work() {
