@@ -1,22 +1,22 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "@/app/components/Cursor/style.module.css";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import gsap from "gsap";
 
-const scaleAnimation = {
+const scaleAnimation: Variants = {
   initial: { opacity: 0, x: "-50%", y: "-50%" },
   enter: {
     opacity: 1,
     x: "-50%",
     y: "-50%",
-    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] as const },
   },
   closed: {
     opacity: 0,
     x: "-50%",
     y: "-50%",
-    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] as const },
   },
 };
 
@@ -59,13 +59,15 @@ export default function WorkCursor({ modal, workItems }) {
                 style={{ backgroundColor: color }}
                 key={`modal_${i}`}
               >
-                <Image
-                  src={`/${src}`}
-                  alt={`${item.label} image`}
-                  width={300}
-                  height={0}
-                  style={{ maxWidth: "auto", height: "auto" }}
-                />
+                {src && (
+                  <Image
+                    src={`/${src}`}
+                    alt={`${item.label} image`}
+                    width={300}
+                    height={0}
+                    style={{ maxWidth: "auto", height: "auto" }}
+                  />
+                )}
               </div>
             );
           })}
