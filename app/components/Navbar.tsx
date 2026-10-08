@@ -23,13 +23,13 @@ function Navbar() {
         <Link href="/" className="text-2xl">
           DG
         </Link>
-        <div className="block md:hidden z-10" aria-label="HamburgerMenu">
+        <div className="block md:hidden z-10">
           <Hamburger
             toggled={isOpen}
             toggle={setOpen}
             size={24}
             duration={0.0}
-            aria-label="HamburgerMenu"
+            label={isOpen ? "Close menu" : "Open menu"}
           />
         </div>
         {isOpen && (
