@@ -10,19 +10,19 @@ export default function Contact() {
   const textTwo = useRef(null);
   let xPerc = 0;
   let way = -1;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+   
   useLayoutEffect(() => {
     gsap.set(textTwo.current, {
       left: textTwo.current.getBoundingClientRect().width,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    requestAnimationFrame(animation); // eslint-disable-line
+     
+    requestAnimationFrame(animation);  
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  let animation; // eslint-disable-line
+  let animation;  
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+   
 
   if (typeof window !== "undefined") {
     window.onload = animation = () => {
@@ -38,7 +38,7 @@ export default function Contact() {
       }
 
       xPerc += 0.05 * way;
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+       
       if (textOne.current) {
         requestAnimationFrame(animation);
       }
@@ -65,9 +65,9 @@ export default function Contact() {
         </div>
       </div>
       <div className="mx-5 py-10 lg:pt-20 sm:mt-0 sm:mx-10 md:mx-20 ">
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light w-full sm:w-2/3 lg:w-1/3">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light w-full sm:w-2/3 lg:w-1/3">
           Are you ready to take on the excitement?
-        </h3>
+        </h2>
       </div>
       <div className="flex max-[450px]:flex-col flex-row items-center justify-between mb-16 mx-5 sm:mx-10 md:mx-20 gap-y-5">
         <div className="flex flex-col items-center min-[450px]:items-start lg:flex-row max-[450px]:text-sm text-lg sm:text-xl lg:text-2xl gap-5 lg:gap-10 sm:pt-0">
@@ -78,10 +78,10 @@ export default function Contact() {
             daniel.gayao7@gmail.com
           </Link>
           <Link
-            href="tel:+639062173558"
+            href="tel:+639460027467"
             className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5 hover:bg-zinc-700 hover:text-white"
           >
-            +63906 217 3558
+            +63 946 002 7467
           </Link>
         </div>
         <div className="flex gap-1.5 max-[450px]:mt-5">
