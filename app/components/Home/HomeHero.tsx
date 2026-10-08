@@ -9,7 +9,7 @@ export default function HomeHero() {
         </h1>
       </div>
       <div className="flex flex-col text-center items-center 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl">
-        <span className="font-extralight">Front-End Web Developer</span>
+        <span className="font-extralight">Full-Stack Developer</span>
         <span className="font-extralight">Based in the Philippines</span>
       </div>
       <div className={` ${styles.bgRadial}`}></div>
@@ -17,7 +17,7 @@ export default function HomeHero() {
         <div className="absolute bottom-4 sm:bottom-7 left-5 sm:left-10 md:left-20">
           <div className="w-12 md:w-24 lg:w-40 xl:w-48 2xl:w-60 h-auto">
             <span className="md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-extralight">
-              Portfolio 2023
+              Portfolio {new Date().getFullYear()}
             </span>
           </div>
         </div>

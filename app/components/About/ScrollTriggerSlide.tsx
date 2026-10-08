@@ -9,10 +9,10 @@ export default function ScrollTriggerSlide() {
   const imageContainerTwo = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
-  let direction = -1; // eslint-disable-line
+  let direction = -1;  
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
@@ -20,7 +20,7 @@ export default function ScrollTriggerSlide() {
         scrub: 0.25,
         start: 0,
         end: window.innerHeight,
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+         
         onUpdate: (e) => (direction = e.direction * -1), // eslint-disable-line
       },
       x: "0",
@@ -30,12 +30,12 @@ export default function ScrollTriggerSlide() {
       left: imageContainerTwo.current.getBoundingClientRect().width,
     });
 
-    requestAnimationFrame(animate); // eslint-disable-line
+    requestAnimationFrame(animate);  
   }, []);
 
   let animate;
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+   
 
   if (typeof window !== "undefined") {
     window.onload = animate = () => {
@@ -51,7 +51,7 @@ export default function ScrollTriggerSlide() {
       }
 
       xPercent += 0.02 * direction;
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+       
       if (imageContainerOne.current && imageContainerTwo.current) {
         requestAnimationFrame(animate);
       }
@@ -61,10 +61,10 @@ export default function ScrollTriggerSlide() {
     <section className="max-w-[1920px] w-full m-auto">
       <div className="my-5 lg:my-10">
         <div className="mx-5 sm:mx-10 md:mx-20 pb-5 sm:pb-10 lg:pb-20">
-          <h5 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4 2xl:w-2/3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl sm:w-2/3 lg:w-3/4 2xl:w-2/3">
             driven by the simple objective of helping companies change the way
             we live.
-          </h5>
+          </h2>
         </div>
         <div
           className="overflow-hidden h-[12rem] lg:h-[15rem] xl:h-[18rem] invisible sm:visible relative"
@@ -80,25 +80,25 @@ export default function ScrollTriggerSlide() {
               height="0"
               sizes="100vw"
               style={{ width: "30%", height: "auto" }}
-              alt="inked2600 Image"
+              alt=""
               priority={true}
             />
             <Image
-              src="/HilagaStudio.jpg"
+              src="/locomote.jpg"
               width="0"
               height="0"
               sizes="100vw"
               style={{ width: "30%", height: "auto" }}
-              alt="Hilaga Studio Image"
+              alt=""
               priority={true}
             />
             <Image
-              src="/Fi.jpg"
+              src="/inked2600.jpg"
               width="0"
               height="0"
               sizes="100vw"
               style={{ width: "30%", height: "auto" }}
-              alt="Fi Image"
+              alt=""
               priority={true}
             />
           </div>
@@ -112,25 +112,25 @@ export default function ScrollTriggerSlide() {
               height="0"
               sizes="100vw"
               style={{ width: "30%", height: "auto" }}
-              alt="inked2600 Image"
+              alt=""
               priority={true}
             />
             <Image
-              src="/HilagaStudio.jpg"
+              src="/locomote.jpg"
               width="0"
               height="0"
               sizes="100vw"
               style={{ width: "30%", height: "auto" }}
-              alt="Hilaga Studio Image"
+              alt=""
               priority={true}
             />
             <Image
-              src="/Fi.jpg"
+              src="/inked2600.jpg"
               width="0"
               height="0"
               sizes="100vw"
               style={{ width: "30%", height: "auto" }}
-              alt="Fi Image"
+              alt=""
               priority={true}
             />
           </div>

@@ -4,42 +4,43 @@ export default function Services() {
   return (
     <section className="max-w-[1920px] w-full px-5 sm:px-10 md:px-20 lg:py-24 m-auto">
       <div className="mb-10">
-        <span className="text-4xl font-medium">
+        <h2 className="text-4xl font-medium">
           Things i can do to help you
-        </span>
+        </h2>
       </div>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 xl:gap-x-12 2xl:p">
         <div>
           <div className="flex items-end gap-5 border-b border-gray-900 w-fit pr-5 pb-1 mb-3">
             <span>01</span>
-            <h4 className="text-3xl max-[260px]:text-lg">Designing</h4>
+            <h3 className="text-3xl max-[260px]:text-lg">Frontend Development</h3>
           </div>
           <p className="text-lg">
-            I provide strong and user-friendly digital designs and have a
-            demonstrated record of designing websites. A solid brand image
-            serves as a foundation of any successful website.
+            I build responsive, animated interfaces with React, Next.js,
+            Tailwind CSS, and GSAP/Framer Motion — focused on performance and
+            a polished user experience.
           </p>
         </div>
         <div>
           <div className="flex items-end gap-5 border-b border-gray-900 w-fit pr-5 pb-1 mb-3">
             <span>02</span>
-            <h4 className="text-3xl max-[260px]:text-sm">Development</h4>
+            <h3 className="text-3xl max-[260px]:text-sm">Backend & APIs</h3>
           </div>
           <p>
-            I develop adaptable, visually appealing websites from beginning to
-            end. UI implementation, Animation, and Server Action are my main
-            areas of interest. I use Next js for development.
+            I build and maintain REST APIs and server logic with Node.js and
+            Express, with SQL and NoSQL databases like MySQL, PostgreSQL, and
+            MongoDB.
           </p>
         </div>
         <div>
           <div className="flex items-end gap-5 border-b border-gray-900 w-fit pr-5 pb-1 mb-3">
             <span className="">03</span>
-            <h4 className="text-3xl max-[260px]:text-sm ">Deployment</h4>
+            <h3 className="text-3xl max-[260px]:text-sm ">Full-Stack Delivery</h3>
           </div>
           <p className="text-lg">
-            It's my ability to create a website from start to finish that sets
-            me apart. My strong sense of design combined with my development
-            abilities allow me to produce amazing projects.
+            From feature development to bug fixes, testing, and deployment on
+            Vercel — I ship and maintain production software end to end,
+            using AI tools like Claude Code to move faster without cutting
+            corners.
           </p>
         </div>
       </div>
