@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import { useParams, notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,25 +7,13 @@ import { getProjectBySlug } from "@/app/lib/projects";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import Cursor from "@/app/components/Cursor/Cursor";
+import useLocomotiveScroll from "@/app/lib/useLocomotiveScroll";
 
 export default function ProjectPage() {
   const params = useParams<{ slug: string }>();
   const project = getProjectBySlug(params.slug);
 
-  useEffect(() => {
-    let locomotiveScroll: InstanceType<
-      typeof import("locomotive-scroll").default
-    > | null = null;
-
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      locomotiveScroll = new LocomotiveScroll();
-    })();
-
-    return () => {
-      locomotiveScroll?.destroy();
-    };
-  }, []);
+  useLocomotiveScroll();
 
   if (!project) {
     notFound();

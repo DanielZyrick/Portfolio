@@ -18,6 +18,7 @@ interface MyComponentProps {
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    let isCancelled = false;
     let locomotiveScroll: InstanceType<
       typeof import("locomotive-scroll").default
     > | null = null;
@@ -25,6 +26,7 @@ export default function Home() {
 
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      if (isCancelled) return;
       locomotiveScroll = new LocomotiveScroll();
 
       timeoutId = setTimeout(() => {
@@ -37,6 +39,7 @@ export default function Home() {
     })();
 
     return () => {
+      isCancelled = true;
       clearTimeout(timeoutId);
       locomotiveScroll?.destroy();
     };

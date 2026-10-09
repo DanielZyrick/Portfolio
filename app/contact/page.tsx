@@ -1,28 +1,16 @@
 "use client";
 import Link from "next/link";
 import Footer from "../components/Footer";
-import { useEffect, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import Cursor from "../components/Cursor/Cursor";
+import useLocomotiveScroll from "../lib/useLocomotiveScroll";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
 
-  useEffect(() => {
-    let locomotiveScroll: InstanceType<
-      typeof import("locomotive-scroll").default
-    > | null = null;
-
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      locomotiveScroll = new LocomotiveScroll();
-    })();
-
-    return () => {
-      locomotiveScroll?.destroy();
-    };
-  }, []);
+  useLocomotiveScroll();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();

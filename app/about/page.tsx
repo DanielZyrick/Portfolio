@@ -7,24 +7,11 @@ import Experience from "../components/About/Experience";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
 import Cursor from "../components/Cursor/Cursor";
+import useLocomotiveScroll from "../lib/useLocomotiveScroll";
 
 export default function About() {
-  useEffect(() => {
-    let locomotiveScroll: InstanceType<
-      typeof import("locomotive-scroll").default
-    > | null = null;
-
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      locomotiveScroll = new LocomotiveScroll();
-    })();
-
-    return () => {
-      locomotiveScroll?.destroy();
-    };
-  }, []);
+  useLocomotiveScroll();
   return (
     <main>
       <section className="max-w-[1920px] w-full max-h-[940px] h-screen m-auto">

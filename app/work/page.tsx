@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useEffect } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Cursor from "../components/Cursor/Cursor";
 import { personalProjects, clientProjects, type Project } from "../lib/projects";
+import useLocomotiveScroll from "../lib/useLocomotiveScroll";
 
 function ProjectRow({ item, i }: { item: Project; i: number }) {
   return (
@@ -37,20 +37,7 @@ function ProjectRow({ item, i }: { item: Project; i: number }) {
 }
 
 export default function Work() {
-  useEffect(() => {
-    let locomotiveScroll: InstanceType<
-      typeof import("locomotive-scroll").default
-    > | null = null;
-
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      locomotiveScroll = new LocomotiveScroll();
-    })();
-
-    return () => {
-      locomotiveScroll?.destroy();
-    };
-  }, []);
+  useLocomotiveScroll();
 
   return (
     <main>

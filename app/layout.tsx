@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Providers from "./components/providers";
 import PageTransition from "./components/PageTransition";
+import ScrollToTop from "./components/ScrollToTop";
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION } from "./lib/site";
 
 const raleway = Raleway({ subsets: ["latin"] });
@@ -44,6 +45,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </Providers>
+        <ScrollToTop />
         <PageTransition />
         <Analytics />
         <SpeedInsights />
