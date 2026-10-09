@@ -8,9 +8,9 @@ export default function PageTransition() {
     <motion.div
       key={pathname}
       className="fixed inset-0 z-999 bg-[#121212] dark:bg-white pointer-events-none"
-      initial={{ opacity: 0.6 }}
+      initial={{ opacity: 0.25 }}
       animate={{ opacity: 0 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
     />
   );
 }
