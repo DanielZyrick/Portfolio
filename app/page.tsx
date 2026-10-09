@@ -18,11 +18,16 @@ interface MyComponentProps {
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    let locomotiveScroll: InstanceType<
+      typeof import("locomotive-scroll").default
+    > | null = null;
+    let timeoutId: ReturnType<typeof setTimeout>;
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      locomotiveScroll = new LocomotiveScroll();
 
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setIsLoading(false);
 
         document.body.style.cursor = "default";
@@ -30,6 +35,11 @@ export default function Home() {
         window.scrollTo(0, 0);
       }, 2000);
     })();
+
+    return () => {
+      clearTimeout(timeoutId);
+      locomotiveScroll?.destroy();
+    };
   }, []);
 
   return (

@@ -12,10 +12,18 @@ import Cursor from "../components/Cursor/Cursor";
 
 export default function About() {
   useEffect(() => {
+    let locomotiveScroll: InstanceType<
+      typeof import("locomotive-scroll").default
+    > | null = null;
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      locomotiveScroll = new LocomotiveScroll();
     })();
+
+    return () => {
+      locomotiveScroll?.destroy();
+    };
   }, []);
   return (
     <main>
@@ -26,23 +34,25 @@ export default function About() {
               <h1 className="text-4xl sm:text-6xl w-full lg:w-1/3 md:absolute left-0 top-0">
                 ABOUT ME
               </h1>
-              <p className="text-2xl md:text-4xl w-full md:w-3/5 md:absolute md:left-1/4 md:top-1/4 lg:left-1/4 2xl:top-[20%] z-10">
-                My name is Daniel Zyrick Gayao, a full-stack developer based
-                in Baguio, Philippines. I have 2+ years of remote experience
-                building and maintaining real estate web platforms for a US
-                client, working across the stack with Next.js, TypeScript,
-                Express, and SQL — from feature development and bug fixes to
-                testing and technical documentation. I use AI coding tools
-                like Claude Code in my daily workflow, and I'm currently
-                learning Python for AI engineering.
-              </p>
-              <Link
-                href="/resume.pdf"
-                target="_blank"
-                className="md:absolute left-1/4 top-[55%] z-10 w-fit rounded-full border border-black dark:border-white px-8 py-3 text-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
-              >
-                Download Resume
-              </Link>
+              <div className="w-full md:w-3/5 md:absolute md:left-1/4 md:top-1/4 lg:left-1/4 2xl:top-[20%] z-10 flex flex-col items-start gap-8">
+                <p className="text-2xl md:text-4xl">
+                  My name is Daniel Zyrick Gayao, a full-stack developer based
+                  in Baguio, Philippines. I have 2+ years of remote experience
+                  building and maintaining real estate web platforms for a US
+                  client, working across the stack with Next.js, TypeScript,
+                  Express, and SQL — from feature development and bug fixes to
+                  testing and technical documentation. I use AI coding tools
+                  like Claude Code in my daily workflow, and I'm currently
+                  learning Python for AI engineering.
+                </p>
+                <Link
+                  href="/resume.pdf"
+                  target="_blank"
+                  className="w-fit rounded-full border border-black dark:border-white px-8 py-3 text-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                >
+                  Download Resume
+                </Link>
+              </div>
               <Image
                 src={danielImage}
                 width={0}

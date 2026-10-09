@@ -14,10 +14,18 @@ export default function ProjectPage() {
   const project = getProjectBySlug(params.slug);
 
   useEffect(() => {
+    let locomotiveScroll: InstanceType<
+      typeof import("locomotive-scroll").default
+    > | null = null;
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      locomotiveScroll = new LocomotiveScroll();
     })();
+
+    return () => {
+      locomotiveScroll?.destroy();
+    };
   }, []);
 
   if (!project) {
