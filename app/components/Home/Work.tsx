@@ -13,7 +13,7 @@ export default function Work() {
         id="work-container"
       >
         <div>
-          <h2 className="font-medium">Site that i created.</h2>
+          <h2 className="font-medium">Site that i worked on.</h2>
         </div>
         <div className="pt-5 transition-all duration-200 ease-linear delay-100">
           {allProjects.map((items, i) => (

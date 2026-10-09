@@ -38,10 +38,18 @@ function ProjectRow({ item, i }: { item: Project; i: number }) {
 
 export default function Work() {
   useEffect(() => {
+    let locomotiveScroll: InstanceType<
+      typeof import("locomotive-scroll").default
+    > | null = null;
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      locomotiveScroll = new LocomotiveScroll();
     })();
+
+    return () => {
+      locomotiveScroll?.destroy();
+    };
   }, []);
 
   return (
@@ -59,7 +67,7 @@ export default function Work() {
         <div className="pb-10">
           <h2 className="text-2xl sm:text-3xl font-medium">My Projects</h2>
           <p className="mt-2 text-base sm:text-lg font-light opacity-70">
-            Built solo, start to finish.
+            Projects that I worked on.
           </p>
         </div>
         <div className="pb-20">
