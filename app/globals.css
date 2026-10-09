@@ -5,7 +5,7 @@
   .font-outline-2 {
     -webkit-text-stroke: 1px black;
   }
-  .font-outline-2-dark {
+  .dark .font-outline-2 {
     -webkit-text-stroke: 1px white;
   }
   .font-outline-4 {

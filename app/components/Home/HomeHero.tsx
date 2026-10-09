@@ -42,13 +42,6 @@ export default function HomeHero() {
           >
             Email
           </Link>
-          <Link
-            className="hover:underline decoration-1 underline-offset-8"
-            href="https://www.linkedin.com/in/daniel-gayao-9611a2207/"
-            target="_blank"
-          >
-            LinkedIn
-          </Link>
         </div>
       </div>
     </section>

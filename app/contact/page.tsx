@@ -10,10 +10,18 @@ export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
 
   useEffect(() => {
+    let locomotiveScroll: InstanceType<
+      typeof import("locomotive-scroll").default
+    > | null = null;
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      locomotiveScroll = new LocomotiveScroll();
     })();
+
+    return () => {
+      locomotiveScroll?.destroy();
+    };
   }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -70,7 +78,6 @@ export default function Contact() {
               <address className="flex flex-col text-xl font-extralight gap-y-1">
                 <Link
                   href="mailto:daniel.gayao7@gmail.com"
-                  target="_blank"
                   className="hover:underline decoration-1 underline-offset-8"
                 >
                   daniel.gayao7@gmail.com
@@ -99,13 +106,6 @@ export default function Contact() {
                   className="hover:underline decoration-1 underline-offset-8"
                 >
                   Facebook
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/daniel-gayao-9611a2207/"
-                  target="_blank"
-                  className="hover:underline decoration-1 underline-offset-8"
-                >
-                  LinkedIn
                 </Link>
               </address>
             </div>

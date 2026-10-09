@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useLayoutEffect, useRef } from "react";
 import { AiFillInstagram } from "react-icons/ai";
-import { BsLinkedin, BsFacebook } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 import gsap from "gsap";
 
 export default function Contact() {
@@ -48,7 +48,7 @@ export default function Contact() {
   return (
     <section className="my-20 w-full relative max-w-[1920px] m-auto">
       <div className="w-full overflow-hidden ">
-        <div className="overflow-hidden w-full h-[3rem] sm:h-[5rem] lg:h-[6rem] xl:h-[8rem] relative text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 dark:font-outline-2-dark whitespace-nowrap">
+        <div className="overflow-hidden w-full h-[3rem] sm:h-[5rem] lg:h-[6rem] xl:h-[8rem] relative text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 whitespace-nowrap">
           <span
             ref={textOne}
             className="pr-5 absolute left-0 whitespace-nowrap"
@@ -85,13 +85,6 @@ export default function Contact() {
           </Link>
         </div>
         <div className="flex gap-1.5 max-[450px]:mt-5">
-          <Link
-            href="https://www.linkedin.com/in/daniel-gayao-9611a2207/"
-            target="_blank"
-            aria-label="Linkedin"
-          >
-            <BsLinkedin size={25} />
-          </Link>
           <Link
             href="https://instagram.com/dzyrick2"
             target="_blank"
