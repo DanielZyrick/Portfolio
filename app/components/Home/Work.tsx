@@ -37,7 +37,7 @@ export default function Work() {
           ))}
           <div className="flex justify-center pt-16 ">
             <Link
-              href={"/work#top"}
+              href={"/work"}
               className="flex items-center justify-center w-56 h-20 rounded-full text-lg bg-bkg dark:bg-white text-white dark:text-black font-medium hover:bg-zinc-700 dark:hover:bg-zinc-300"
             >
               Explore more
