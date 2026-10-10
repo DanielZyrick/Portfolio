@@ -34,11 +34,16 @@ export default function WorkCursor({ modal, workItems }) {
       ease: "power3",
     });
 
-    window.addEventListener("mousemove", (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       moveContainerX(clientX);
       moveContainerY(clientY);
-    });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
   return (
