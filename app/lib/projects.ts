@@ -59,11 +59,11 @@ export const clientProjects: Project[] = [
     role: "Feature development & bug fixes",
     period: "May 2024 – September 2026",
     description:
-      "Real estate platform built with a 3-person remote team for a US client (DBM Grow).",
+      "Real estate platform built with a 4-person remote team for a US client (DBM Grow).",
     highlights: [
       "Shipped features and fixed production bugs in sprint-based development.",
       "Wrote tests, handled QA, and troubleshot environment issues.",
-      "Part of a three-person team maintaining three real estate platforms for DBM Grow.",
+      "Part of a four-person team maintaining three real estate platforms for DBM Grow.",
     ],
     tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
   },
@@ -76,11 +76,11 @@ export const clientProjects: Project[] = [
     role: "Frontend lead, backend co-developer",
     period: "May 2024 – September 2026",
     description:
-      "Real estate platform built with a 3-person remote team for a US client (DBM Grow).",
+      "Real estate platform built with a 4-person remote team for a US client (DBM Grow).",
     highlights: [
       "Built the full frontend and co-developed the backend.",
       "Executed a legacy v1 to v2 architecture migration to improve scalability and performance.",
-      "Part of a three-person team maintaining three real estate platforms for DBM Grow.",
+      "Part of a four-person team maintaining three real estate platforms for DBM Grow.",
     ],
     tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
   },
@@ -93,11 +93,11 @@ export const clientProjects: Project[] = [
     role: "Feature development & bug fixes",
     period: "May 2024 – September 2026",
     description:
-      "Real estate platform built with a 3-person remote team for a US client (DBM Grow).",
+      "Real estate platform built with a 4-person remote team for a US client (DBM Grow).",
     highlights: [
       "Shipped features and fixed production bugs in sprint-based development.",
       "Wrote tests, handled QA, and troubleshot environment issues.",
-      "Part of a three-person team maintaining three real estate platforms for DBM Grow.",
+      "Part of a four-person team maintaining three real estate platforms for DBM Grow.",
     ],
     tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
   },

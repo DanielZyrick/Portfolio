@@ -66,7 +66,7 @@ export default function Work() {
         <div className="pb-10">
           <h2 className="text-2xl sm:text-3xl font-medium">Client Work</h2>
           <p className="mt-2 text-base sm:text-lg font-light opacity-70">
-            Built remotely as part of a 3-person development team for DBM
+            Built remotely as part of a 4-person development team for DBM
             Grow's real estate platforms.
           </p>
         </div>

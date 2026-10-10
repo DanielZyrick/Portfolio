@@ -4,7 +4,7 @@ const experience = [
     org: "DBM Grow — Remote (US Client)",
     period: "May 2024 – September 2026",
     bullets: [
-      "Built the frontend and co-developed the backend of highestprice.com, one of three real estate web platforms maintained by a three-person development team (Next.js, TypeScript, Express, Kysely, MySQL).",
+      "Built the frontend and co-developed the backend of highestprice.com, one of three real estate web platforms maintained by a four-person development team (Next.js, TypeScript, Express, Kysely, MySQL).",
       "Executed a legacy v1 to v2 architecture migration to improve scalability and performance.",
       "Shipped features and fixed production bugs across all three sites in sprint-based development.",
       "Wrote tests, handled QA, troubleshot environment issues, and wrote scripts to automate developer workflows.",
