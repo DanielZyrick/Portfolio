@@ -51,11 +51,11 @@ export default function Contact() {
               CONTACT ME
             </h1>
             <p className="text-2xl lg:text-4xl lg:w-2/3 xl:w-2/4 pt-20">
-              I am always up for fresh connections and interesting discussions.
-              The details listed below can be used to get in touch with me. I am
-              happy to hear from you. If you would like to talk about exciting
-              projects, new collaboration opportunities, or just to share ideas
-              about front-end development, don't hesitate to get in touch.
+              I'm always open to new opportunities and conversations,
+              whether that's a full-time role, contract work, or just a
+              question about something I've built. Use the details below to
+              reach me directly, or send a message through the form and
+              I'll get back to you soon.
             </p>
           </div>
         </div>
