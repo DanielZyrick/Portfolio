@@ -10,6 +10,12 @@ export type Project = {
   description: string;
   highlights: string[];
   tech: string[];
+  // Optional extras for a fuller case study.
+  repo?: string;
+  writeup?: string;
+  video?: string;
+  gallery?: { src: string; alt: string; caption: string }[];
+  decisions?: { title: string; body: string }[];
 };
 
 export const personalProjects: Project[] = [
@@ -33,6 +39,53 @@ export const personalProjects: Project[] = [
       "Shipped in 50+ small commits with 279 unit tests and 28 end-to-end flows on desktop and phone, and migrations always run on production before the code that needs them.",
     ],
     tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Kysely", "Auth.js", "Claude API", "Tailwind", "Vitest", "Playwright"],
+    repo: "https://github.com/DanielZyrick/Compound",
+    writeup: "https://github.com/DanielZyrick/Compound/blob/main/docs/WRITEUP.md",
+    gallery: [
+      {
+        src: "compound/learn.jpg",
+        alt: "The Learn page with a track in progress and three recommended tracks",
+        caption: "Recommended tracks, each with a reason, based on what you do and want to learn.",
+      },
+      {
+        src: "compound/goal.jpg",
+        alt: "A goal page with its status, adjusted dates and savings",
+        caption: "A goal that's slipping: the remaining dates move to fit, using buffer days.",
+      },
+      {
+        src: "compound/contact.jpg",
+        alt: "A contact page with a follow-up date, notes and touchpoints",
+        caption: "Contacts for networking, with touchpoints and follow-ups that show on Today.",
+      },
+      {
+        src: "compound/schedule.jpg",
+        alt: "The Schedule page showing the next seven days of calendar events",
+        caption: "The week ahead from Google Calendar, read-only and never stored.",
+      },
+      {
+        src: "compound/money.jpg",
+        alt: "The Money page with a budget summary and spending by category",
+        caption: "Monthly budgets per category, with what's left and whether you're on pace.",
+      },
+    ],
+    decisions: [
+      {
+        title: "AI output is untrusted input",
+        body: "Every Claude call runs on the server. Each response must be JSON that passes a schema, or it's retried once and then shown as a clear error. Generated lessons are cached so they're never paid for twice, every call counts toward a daily limit, and model names come from environment variables.",
+      },
+      {
+        title: "Goal schedules are pure functions",
+        body: "Status, adjusted dates and buffer use are worked out from the plan and the steps you've ticked, never stored, so they can't drift out of sync. A unit test caught a real flaw: pace came from the current deadline, so extending it didn't help. Measuring against the original plan fixed it.",
+      },
+      {
+        title: "A calendar without storing anyone's calendar",
+        body: "Google Calendar connects read-only through OAuth and plain fetch. A single-use state cookie protects the flow, tokens are encrypted with AES-256-GCM, and events are fetched when you look, so the database never holds anyone's events.",
+      },
+      {
+        title: "Migrations before code",
+        body: "Development runs on a separate database. The migration runner prints which host it's about to touch, end-to-end tests refuse to run against production, and every migration reaches production before the code that needs it.",
+      },
+    ],
   },
   {
     slug: "locomote",

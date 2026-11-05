@@ -2,12 +2,15 @@
 import { useParams, notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { FiArrowUpRight, FiArrowLeft } from "react-icons/fi";
+import { FiArrowUpRight, FiArrowLeft, FiGithub, FiPlay } from "react-icons/fi";
 import { getProjectBySlug } from "@/app/lib/projects";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import Cursor from "@/app/components/Cursor/Cursor";
 import useLocomotiveScroll from "@/app/lib/useLocomotiveScroll";
+
+const pillButton =
+  "inline-flex items-center gap-2 w-fit rounded-full border border-black dark:border-white px-8 py-3 text-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors";
 
 export default function ProjectPage() {
   const params = useParams<{ slug: string }>();
@@ -41,13 +44,21 @@ export default function ProjectPage() {
               {project.label}
             </h1>
           </div>
-          <Link
-            href={project.href}
-            target="_blank"
-            className="inline-flex items-center gap-2 w-fit rounded-full border border-black dark:border-white px-8 py-3 text-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
-          >
-            Visit Live Site <FiArrowUpRight />
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link href={project.href} target="_blank" className={pillButton}>
+              Visit Live Site <FiArrowUpRight />
+            </Link>
+            {project.repo && (
+              <Link href={project.repo} target="_blank" className={pillButton}>
+                View Code <FiGithub />
+              </Link>
+            )}
+            {project.video && (
+              <Link href={project.video} target="_blank" className={pillButton}>
+                Watch the Demo <FiPlay />
+              </Link>
+            )}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
@@ -112,6 +123,52 @@ export default function ProjectPage() {
             ))}
           </ul>
         </div>
+
+        {project.gallery && (
+          <div className="py-10 border-t border-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-medium mb-8">A closer look</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-12">
+              {project.gallery.map((shot, i, all) => (
+                // An odd last image spans both columns, so the grid has no gap.
+                <figure key={shot.src} className={i === all.length - 1 && all.length % 2 === 1 ? "lg:col-span-2" : undefined}>
+                  <Image
+                    src={`/${shot.src}`}
+                    width={1440}
+                    height={900}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    style={{ width: "100%", height: "auto" }}
+                    alt={shot.alt}
+                    className="rounded-lg"
+                  />
+                  <figcaption className="mt-4 text-base sm:text-lg font-light opacity-80">{shot.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {project.decisions && (
+          <div className="py-10 border-t border-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-medium mb-8">Key decisions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8 max-w-6xl">
+              {project.decisions.map((d) => (
+                <div key={d.title}>
+                  <h3 className="text-lg sm:text-xl font-medium mb-2">{d.title}</h3>
+                  <p className="text-base sm:text-lg font-light opacity-80">{d.body}</p>
+                </div>
+              ))}
+            </div>
+            {project.writeup && (
+              <Link
+                href={project.writeup}
+                target="_blank"
+                className="inline-flex items-center gap-2 mt-10 text-lg hover:underline underline-offset-8"
+              >
+                Read the full write-up <FiArrowUpRight />
+              </Link>
+            )}
+          </div>
+        )}
       </section>
       <Contact />
       <Footer />
