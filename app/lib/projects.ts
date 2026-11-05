@@ -14,6 +14,27 @@ export type Project = {
 
 export const personalProjects: Project[] = [
   {
+    slug: "compound",
+    label: "Compound",
+    href: "https://compound-nine-chi.vercel.app/",
+    src: "compound.jpg",
+    color: "#FFFFFF",
+    type: "personal",
+    role: "Solo developer: design, build, testing, deployment",
+    period: "October 2026 – present",
+    description:
+      "Web app for getting 1% better every day: habits, AI learning tracks, goals that adjust when you fall behind, contacts, Google Calendar and money, all on one Today page.",
+    highlights: [
+      "Built AI features on the Claude API, server-side only: every response must pass a schema, generated content is cached, calls are logged with a daily limit, and a demo mode runs the whole app without an API key.",
+      "Designed a goal engine of pure functions that works out on track, behind or at risk and moves the remaining dates when you slip, with buffer days before each deadline.",
+      "Connected Google Calendar read-only with OAuth and plain fetch: tokens encrypted with AES-256-GCM, events fetched live and never stored, placed on the right day in any timezone.",
+      "Personalised every AI feature from a short profile, which Claude can fill in from a resume PDF that is never stored.",
+      "Stored money in integer cents, with monthly budgets per category, pace tracking and savings toward goals.",
+      "Shipped in 50+ small commits with 279 unit tests and 28 end-to-end flows on desktop and phone, and migrations always run on production before the code that needs them.",
+    ],
+    tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Kysely", "Auth.js", "Claude API", "Tailwind", "Vitest", "Playwright"],
+  },
+  {
     slug: "locomote",
     label: "Locomote",
     href: "https://locomote.vercel.app/",
