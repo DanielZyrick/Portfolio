@@ -12,6 +12,8 @@ export type Project = {
   tech: string[];
   // Optional extras for a fuller case study.
   repo?: string;
+  // Extra live sites, for an entry that covers more than one product.
+  moreLinks?: { label: string; href: string }[];
   writeup?: string;
   video?: string;
   gallery?: { src: string; alt: string; caption: string }[];
@@ -31,12 +33,9 @@ export const personalProjects: Project[] = [
     description:
       "Web app for getting 1% better every day: habits, AI learning tracks, goals that adjust when you fall behind, contacts, Google Calendar and money, all on one Today page.",
     highlights: [
-      "Built AI features on the Claude API, server-side only: every response must pass a schema, generated content is cached, calls are logged with a daily limit, and a demo mode runs the whole app without an API key.",
-      "Designed a goal engine of pure functions that works out on track, behind or at risk and moves the remaining dates when you slip, with buffer days before each deadline.",
-      "Connected Google Calendar read-only with OAuth and plain fetch: tokens encrypted with AES-256-GCM, events fetched live and never stored, placed on the right day in any timezone.",
-      "Personalised every AI feature from a short profile, which Claude can fill in from a resume PDF that is never stored.",
-      "Stored money in integer cents, with monthly budgets per category, pace tracking and savings toward goals.",
-      "Shipped in 50+ small commits with 279 unit tests and 28 end-to-end flows on desktop and phone, and migrations always run on production before the code that needs them.",
+      "Built AI features on the Claude API, server-side only and personalised from a short profile: every response must pass a schema, generated content is cached, calls count toward a daily limit, and a demo mode runs the whole app without an API key.",
+      "Designed a goal engine of pure functions that works out on track, behind or at risk and moves the remaining dates when you slip, alongside read-only Google Calendar sync with encrypted tokens and budgets stored in integer cents.",
+      "Shipped in 50+ small commits with 279 unit tests and 28 end-to-end flows on desktop and phone, with every migration run on production before the code that needs it.",
     ],
     tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Kysely", "Auth.js", "Claude API", "Tailwind", "Vitest", "Playwright"],
     repo: "https://github.com/DanielZyrick/Compound",
@@ -103,6 +102,7 @@ export const personalProjects: Project[] = [
       "Styled with Tailwind CSS and React Query for data fetching and cache management.",
     ],
     tech: ["Next.js", "Tailwind", "React Query", "Prisma", "MongoDB", "NextAuth.js"],
+    repo: "https://github.com/DanielZyrick/Locomote",
   },
   {
     slug: "inked2600",
@@ -120,28 +120,11 @@ export const personalProjects: Project[] = [
       "Built with Vite and Sass for a fast, lightweight static build.",
     ],
     tech: ["React", "Vite", "Sass", "TypeScript", "GSAP"],
+    repo: "https://github.com/DanielZyrick/Inked2600",
   },
 ];
 
 export const clientProjects: Project[] = [
-  {
-    slug: "cash-offers",
-    label: "Cash Offers",
-    href: "https://app.cashoffers.pro/",
-    src: "cash-offers.jpg",
-    color: "#111111",
-    type: "client",
-    role: "Feature development & bug fixes",
-    period: "May 2024 – September 2026",
-    description:
-      "Real estate platform built with a 4-person remote team for a US client (DBM Grow).",
-    highlights: [
-      "Shipped features and fixed production bugs in sprint-based development.",
-      "Wrote tests, handled QA, and troubleshot environment issues.",
-      "Part of a four-person team maintaining three real estate platforms for DBM Grow.",
-    ],
-    tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
-  },
   {
     slug: "highestprice",
     label: "HighestPrice",
@@ -156,27 +139,33 @@ export const clientProjects: Project[] = [
     highlights: [
       "Built the full frontend and co-developed the backend.",
       "Executed a legacy v1 to v2 architecture migration to improve scalability and performance.",
-      "Part of a four-person team maintaining three real estate platforms for DBM Grow.",
     ],
     tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
   },
   {
-    slug: "homeuptick",
-    label: "HomeUptick",
-    href: "https://www.homeuptick.com/",
-    src: "homeuptick.jpg",
+    slug: "cash-offers",
+    label: "Cash Offers & HomeUptick",
+    href: "https://app.cashoffers.pro/",
+    src: "cash-offers.jpg",
     color: "#111111",
     type: "client",
     role: "Feature development & bug fixes",
     period: "May 2024 – September 2026",
     description:
-      "Real estate platform built with a 4-person remote team for a US client (DBM Grow).",
+      "Two more real estate platforms maintained by the same 4-person remote team for DBM Grow.",
     highlights: [
-      "Shipped features and fixed production bugs in sprint-based development.",
+      "Shipped features and fixed production bugs on both platforms in sprint-based development.",
       "Wrote tests, handled QA, and troubleshot environment issues.",
-      "Part of a four-person team maintaining three real estate platforms for DBM Grow.",
     ],
     tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
+    moreLinks: [{ label: "Visit HomeUptick", href: "https://www.homeuptick.com/" }],
+    gallery: [
+      {
+        src: "homeuptick.jpg",
+        alt: "The HomeUptick home page",
+        caption: "HomeUptick, the second platform in this entry.",
+      },
+    ],
   },
 ];
 

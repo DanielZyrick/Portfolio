@@ -47,14 +47,14 @@ export default function Work() {
       >
         <div className="w-full min-[500px]:w-3/4 sm:w-2/3 lg:w-2/4 pb-20">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light">
-            Here is a small sampling of my top website.{" "}
+            Here is a small sampling of my top websites.
           </h1>
         </div>
 
         <div className="pb-10">
           <h2 className="text-2xl sm:text-3xl font-medium">My Projects</h2>
           <p className="mt-2 text-base sm:text-lg font-light opacity-70">
-            Projects that I worked on.
+            Things I designed and built on my own.
           </p>
         </div>
         <div className="pb-20">

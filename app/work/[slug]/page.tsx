@@ -48,6 +48,11 @@ export default function ProjectPage() {
             <Link href={project.href} target="_blank" className={pillButton}>
               Visit Live Site <FiArrowUpRight />
             </Link>
+            {project.moreLinks?.map((link) => (
+              <Link key={link.href} href={link.href} target="_blank" className={pillButton}>
+                {link.label} <FiArrowUpRight />
+              </Link>
+            ))}
             {project.repo && (
               <Link href={project.repo} target="_blank" className={pillButton}>
                 View Code <FiGithub />

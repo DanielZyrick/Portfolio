@@ -89,7 +89,7 @@ export default function Contact() {
                   Instagram
                 </Link>
                 <Link
-                  href="https://www.facebook.com/daniel.zyrick?mibextid=LQQJ4d"
+                  href="https://www.facebook.com/daniel.zyrick"
                   target="_blank"
                   className="hover:underline decoration-1 underline-offset-8"
                 >

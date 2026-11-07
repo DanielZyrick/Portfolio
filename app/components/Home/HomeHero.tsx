@@ -31,7 +31,7 @@ export default function HomeHero() {
           </Link>
           <Link
             className="hover:underline decoration-1 underline-offset-8"
-            href="https://www.facebook.com/daniel.zyrick?mibextid=LQQJ4d"
+            href="https://www.facebook.com/daniel.zyrick"
             target="_blank"
           >
             Facebook

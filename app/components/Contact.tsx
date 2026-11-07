@@ -93,7 +93,7 @@ export default function Contact() {
             <AiFillInstagram size={25} />
           </Link>
           <Link
-            href="https://www.facebook.com/daniel.zyrick?mibextid=LQQJ4d"
+            href="https://www.facebook.com/daniel.zyrick"
             target="_blank"
             aria-label="Facebook"
           >
