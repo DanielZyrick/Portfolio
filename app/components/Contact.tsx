@@ -81,7 +81,7 @@ export default function Contact() {
             href="tel:+639460027467"
             className="flex w-fit justify-center items-center h-14 rounded-full outline outline-1 px-5 hover:bg-zinc-700 hover:text-white"
           >
-            +63 946 002 7467
+            0946 002 7467
           </Link>
         </div>
         <div className="flex gap-1.5 max-[450px]:mt-5">

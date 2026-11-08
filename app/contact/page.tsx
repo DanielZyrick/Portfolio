@@ -74,7 +74,7 @@ export default function Contact() {
                   href="tel:+639460027467"
                   className="hover:underline decoration-1 underline-offset-8"
                 >
-                  +63 946 002 7467
+                  0946 002 7467
                 </Link>
               </address>
             </div>
