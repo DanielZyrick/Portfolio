@@ -3,6 +3,9 @@ import Image from "next/image";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { allProjects } from "@/app/lib/projects";
+
+const marqueeImages = allProjects.filter((project) => project.src);
 
 export default function ScrollTriggerSlide() {
   const imageContainerOne = useRef(null);
@@ -74,65 +77,35 @@ export default function ScrollTriggerSlide() {
             className="absolute top-0 left-0 w-full flex justify-around w-full nowrap object-cover"
             ref={imageContainerOne}
           >
-            <Image
-              src="/inked2600.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt=""
-              priority={true}
-            />
-            <Image
-              src="/locomote.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt=""
-              priority={true}
-            />
-            <Image
-              src="/inked2600.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt=""
-              priority={true}
-            />
+            {marqueeImages.map((project) => (
+              <Image
+                key={`one_${project.slug}`}
+                src={`/${project.src}`}
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "18%", height: "auto" }}
+                alt={`${project.label} project screenshot`}
+                priority={true}
+              />
+            ))}
           </div>
           <div
             className="absolute top-0 w-full flex justify-around nowrap object-cover"
             ref={imageContainerTwo}
           >
-            <Image
-              src="/inked2600.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt=""
-              priority={true}
-            />
-            <Image
-              src="/locomote.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt=""
-              priority={true}
-            />
-            <Image
-              src="/inked2600.jpg"
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: "30%", height: "auto" }}
-              alt=""
-              priority={true}
-            />
+            {marqueeImages.map((project) => (
+              <Image
+                key={`two_${project.slug}`}
+                src={`/${project.src}`}
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "18%", height: "auto" }}
+                alt={`${project.label} project screenshot`}
+                priority={true}
+              />
+            ))}
           </div>
         </div>
       </div>
