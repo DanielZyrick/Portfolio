@@ -144,28 +144,53 @@ export const clientProjects: Project[] = [
   },
   {
     slug: "cash-offers",
-    label: "Cash Offers & HomeUptick",
+    label: "Cash Offers",
     href: "https://app.cashoffers.pro/",
     src: "cash-offers.jpg",
+    color: "#111111",
+    type: "client",
+    role: "Full-stack developer — feature development, bug fixes, legacy migration",
+    period: "May 2024 – September 2026",
+    description:
+      "Real estate offer-orchestration platform built with a 4-person remote team for a US client (DBM Grow), white-labeled across several real estate brands. The most substantial of the platforms I worked on — 1,500+ commits spanning a legacy PHP backend, a modern TypeScript/Express rewrite, and the Next.js agent dashboard.",
+    highlights: [
+      "Migrated the dashboard's data-fetching from server-rendered PHP endpoints to a modern client-side/static-first Next.js architecture, page by page across properties, teams, users, buy boxes, billing, and offers, without a big-bang rewrite.",
+      "Built an agent commission calculator from scratch — configurable commission templates, retroactive fee recalculation, and a reconciliation system to audit and backfill historically miscalculated commissions.",
+      "Shipped a compensation calculator, billing-visibility controls for corporate-paid accounts, and mobile layout fixes across the dashboard.",
+      "Fixed production incidents including non-idempotent webhook handling and broken subscription lookups.",
+    ],
+    tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
+    decisions: [
+      {
+        title: "Migrating rendering strategy without breaking production",
+        body: "The dashboard's PHP-era endpoints were converted to client-side/static Next.js data-fetching one page at a time — properties, then teams, then users, then billing — instead of a single rewrite. Each page shipped and was verified independently, so a regression was isolated to one page instead of the whole dashboard.",
+      },
+      {
+        title: "Commission data integrity over cleverness",
+        body: "Commission calculations touch real money, so the fee-tagging logic had to be auditable, not just correct. Built a reconciliation system that could fall back to raw tagged fees when a commission snapshot was missing, backfill historical records, and dry-run a recompute before applying it — so a bug in the calculator could be caught and fixed retroactively instead of silently mispaying agents.",
+      },
+      {
+        title: "Legacy PHP and modern TypeScript, side by side",
+        body: "Rather than block feature work on a full backend rewrite, the legacy PHP API (api-v1) stayed live for endpoints not yet migrated while new work landed on a TypeScript/Express/Kysely backend (api-v2), tracked endpoint-by-endpoint against a migration list until v1 could be fully deprecated.",
+      },
+    ],
+  },
+  {
+    slug: "homeuptick",
+    label: "HomeUptick",
+    href: "https://www.homeuptick.com/",
+    src: "homeuptick.jpg",
     color: "#111111",
     type: "client",
     role: "Feature development & bug fixes",
     period: "May 2024 – September 2026",
     description:
-      "Two more real estate platforms maintained by the same 4-person remote team for DBM Grow.",
+      "Lead-capture and client-digest platform for real estate agents, built with a 4-person remote team for a US client (DBM Grow) — a separate product line from Cash Offers, with its own Next.js/Supabase stack.",
     highlights: [
-      "Shipped features and fixed production bugs on both platforms in sprint-based development.",
+      "Shipped features and fixed production bugs in sprint-based development.",
       "Wrote tests, handled QA, and troubleshot environment issues.",
     ],
-    tech: ["Next.js", "TypeScript", "Express", "Kysely", "MySQL"],
-    moreLinks: [{ label: "Visit HomeUptick", href: "https://www.homeuptick.com/" }],
-    gallery: [
-      {
-        src: "homeuptick.jpg",
-        alt: "The HomeUptick home page",
-        caption: "HomeUptick, the second platform in this entry.",
-      },
-    ],
+    tech: ["Next.js", "Supabase", "PostgreSQL", "Stripe", "React Query"],
   },
 ];
 
