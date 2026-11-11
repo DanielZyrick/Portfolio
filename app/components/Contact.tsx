@@ -51,14 +51,14 @@ export default function Contact() {
         <div className="overflow-hidden w-full h-[3rem] sm:h-[5rem] lg:h-[6rem] xl:h-[8rem] relative text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-white dark:text-[#121212] font-outline-2 whitespace-nowrap">
           <span
             ref={textOne}
-            className="pr-5 absolute left-0 whitespace-nowrap"
+            className="pr-5 absolute left-0 whitespace-nowrap will-change-transform"
           >
             LET'S WORK TOGETHER - LET'S WORK TOGETHER -
           </span>
           <span
             ref={textTwo}
             id="contactSecondTextWidth"
-            className="pr-5 absolute whitespace-nowrap"
+            className="pr-5 absolute whitespace-nowrap will-change-transform"
           >
             LET'S WORK TOGETHER - LET'S WORK TOGETHER -
           </span>
