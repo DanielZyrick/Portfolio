@@ -107,7 +107,7 @@ export const personalProjects: Project[] = [
     description:
       "Web app that streamlines booking bus tickets for travelers.",
     highlights: [
-      "Built the full booking flow — seat selection, trip search, and reservation — as a solo project.",
+      "Built the full booking flow (seat selection, trip search, and reservation) as a solo project.",
       "Used Prisma + MongoDB for data modeling and NextAuth.js for authentication.",
       "Styled with Tailwind CSS and React Query for data fetching and cache management.",
     ],
@@ -159,13 +159,13 @@ export const clientProjects: Project[] = [
     src: "cash-offers.jpg",
     color: "#111111",
     type: "client",
-    role: "Full-stack developer — feature development, bug fixes, legacy migration",
+    role: "Full-stack developer: feature development, bug fixes, legacy migration",
     period: "May 2024 – September 2026",
     description:
-      "Real estate offer-orchestration platform built with a 4-person remote team for a US client (DBM Grow), white-labeled across several real estate brands. The most substantial of the platforms I worked on — 1,500+ commits spanning a legacy PHP backend, a modern TypeScript/Express rewrite, and the Next.js agent dashboard.",
+      "Real estate offer-orchestration platform built with a 4-person remote team for a US client (DBM Grow), white-labeled across several real estate brands. The most substantial of the platforms I worked on: 1,500+ commits spanning a legacy PHP backend, a modern TypeScript/Express rewrite, and the Next.js agent dashboard.",
     highlights: [
       "Migrated the dashboard's data-fetching from server-rendered PHP endpoints to a modern client-side/static-first Next.js architecture, page by page across properties, teams, users, buy boxes, billing, and offers, without a big-bang rewrite.",
-      "Built an agent commission calculator from scratch — configurable commission templates, retroactive fee recalculation, and a reconciliation system to audit and backfill historically miscalculated commissions.",
+      "Built an agent commission calculator from scratch: configurable commission templates, retroactive fee recalculation, and a reconciliation system to audit and backfill historically miscalculated commissions.",
       "Shipped a compensation calculator, billing-visibility controls for corporate-paid accounts, and mobile layout fixes across the dashboard.",
       "Fixed production incidents including non-idempotent webhook handling and broken subscription lookups.",
     ],
@@ -173,11 +173,11 @@ export const clientProjects: Project[] = [
     decisions: [
       {
         title: "Migrating rendering strategy without breaking production",
-        body: "The dashboard's PHP-era endpoints were converted to client-side/static Next.js data-fetching one page at a time — properties, then teams, then users, then billing — instead of a single rewrite. Each page shipped and was verified independently, so a regression was isolated to one page instead of the whole dashboard.",
+        body: "The dashboard's PHP-era endpoints were converted to client-side/static Next.js data-fetching one page at a time (properties, then teams, then users, then billing) instead of a single rewrite. Each page shipped and was verified independently, so a regression was isolated to one page instead of the whole dashboard.",
       },
       {
         title: "Commission data integrity over cleverness",
-        body: "Commission calculations touch real money, so the fee-tagging logic had to be auditable, not just correct. Built a reconciliation system that could fall back to raw tagged fees when a commission snapshot was missing, backfill historical records, and dry-run a recompute before applying it — so a bug in the calculator could be caught and fixed retroactively instead of silently mispaying agents.",
+        body: "Commission calculations touch real money, so the fee-tagging logic had to be auditable, not just correct. Built a reconciliation system that could fall back to raw tagged fees when a commission snapshot was missing, backfill historical records, and dry-run a recompute before applying it, so a bug in the calculator could be caught and fixed retroactively instead of silently mispaying agents.",
       },
       {
         title: "Legacy PHP and modern TypeScript, side by side",
@@ -195,7 +195,7 @@ export const clientProjects: Project[] = [
     role: "Feature development & bug fixes",
     period: "May 2024 – September 2026",
     description:
-      "Lead-capture and client-digest platform for real estate agents, built with a 4-person remote team for a US client (DBM Grow) — a separate product line from Cash Offers, with its own Next.js/Supabase stack.",
+      "Lead-capture and client-digest platform for real estate agents, built with a 4-person remote team for a US client (DBM Grow), a separate product line from Cash Offers, with its own Next.js/Supabase stack.",
     highlights: [
       "Shipped features and fixed production bugs in sprint-based development.",
       "Wrote tests, handled QA, and troubleshot environment issues.",

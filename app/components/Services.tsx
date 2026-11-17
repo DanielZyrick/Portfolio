@@ -16,7 +16,7 @@ export default function Services() {
           </div>
           <p className="text-lg">
             I build responsive, animated interfaces with React, Next.js,
-            Tailwind CSS, and GSAP/Framer Motion — focused on performance and
+            Tailwind CSS, and GSAP/Framer Motion, focused on performance and
             a polished user experience.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function Services() {
           </div>
           <p className="text-lg">
             From feature development to bug fixes, testing, and deployment on
-            Vercel — I ship and maintain production software end to end,
+            Vercel. I ship and maintain production software end to end,
             using AI tools like Claude Code to move faster without cutting
             corners.
           </p>

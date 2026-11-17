@@ -27,7 +27,7 @@ export default function About() {
                   in Baguio, Philippines. I have 2+ years of remote experience
                   building and maintaining real estate web platforms for a US
                   client, working across the stack with Next.js, TypeScript,
-                  Express, and SQL — from feature development and bug fixes to
+                  Express, and SQL, from feature development and bug fixes to
                   testing and technical documentation. I use AI coding tools
                   like Claude Code in my daily workflow, and I'm currently
                   learning Python for AI engineering.

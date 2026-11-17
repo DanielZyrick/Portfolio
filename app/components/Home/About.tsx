@@ -19,7 +19,7 @@ export default function About() {
         <p className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mb-5 lg:mb-10">
           I'm a full-stack developer with 2+ years of remote experience
           building and maintaining real estate web platforms for a US
-          client — from shipping features to fixing production bugs and
+          client, from shipping features to fixing production bugs and
           writing tests.
         </p>
         <div className="flex flex-col sm:flex-row items-center">

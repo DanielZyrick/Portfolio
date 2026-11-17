@@ -1,7 +1,7 @@
 const experience = [
   {
     role: "Full-Stack Developer / Software Contractor",
-    org: "DBM Grow — Remote (US Client)",
+    org: "DBM Grow, Remote (US Client)",
     period: "May 2024 – September 2026",
     bullets: [
       "Built the frontend and co-developed the backend of highestprice.com, one of three real estate web platforms maintained by a four-person development team (Next.js, TypeScript, Express, Kysely, MySQL).",
@@ -12,7 +12,7 @@ const experience = [
   },
   {
     role: "Junior Front-End Developer",
-    org: "NFINITE IT Solutions & Services Inc. — Baguio, PH",
+    org: "NFINITE IT Solutions & Services Inc., Baguio, PH",
     period: "January 2022 – May 2022",
     bullets: [
       "Created mockups, interactive prototypes, and built responsive websites adhering to web development best practices.",

@@ -18,7 +18,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.label} — Daniel Zyrick Gayao`,
+    title: `${project.label} - Daniel Zyrick Gayao`,
     description: project.description,
     openGraph: {
       title: project.label,

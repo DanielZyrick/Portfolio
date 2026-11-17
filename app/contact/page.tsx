@@ -139,7 +139,7 @@ export default function Contact() {
               </button>
               {status === "success" && (
                 <p className="text-lg text-green-600 dark:text-green-400">
-                  Thanks! Your message has been sent — I'll get back to you
+                  Thanks! Your message has been sent. I'll get back to you
                   soon.
                 </p>
               )}
