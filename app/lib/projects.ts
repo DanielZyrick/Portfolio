@@ -35,8 +35,8 @@ export const personalProjects: Project[] = [
     highlights: [
       "Built AI features on the Claude API, server-side only and personalised from a short profile: every response must pass a schema, generated content is cached, calls count toward a daily limit, and a demo mode runs the whole app without an API key.",
       "Designed a goal engine of pure functions that works out on track, behind or at risk and moves the remaining dates when you slip, alongside read-only Google Calendar sync with encrypted tokens and budgets stored in integer cents.",
-      "Measured the AI, not just validated it: evals score real lessons for exercise order, sound answers and diagrams, and run each code example in a locked-down Node sandbox to check it prints what the lesson says.",
-      "Shipped in small commits with 393 unit tests and 34 end-to-end flows on desktop and phone, with every migration run on production before the code that needs it.",
+      "Measured the AI, not just validated it: evals score real lessons for exercise order, sound answers and diagrams, and run each code example in a locked-down Node sandbox to check it prints what the lesson says. A second set checks the grader of written answers is fair and can't be talked into marking a wrong answer correct.",
+      "Shipped in small commits with 415 unit tests and 34 end-to-end flows on desktop and phone, with every migration run on production before the code that needs it.",
     ],
     tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Kysely", "Auth.js", "Claude API", "Tailwind", "Vitest", "Playwright"],
     repo: "https://github.com/DanielZyrick/Compound",
