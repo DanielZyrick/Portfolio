@@ -35,12 +35,18 @@ export const personalProjects: Project[] = [
     highlights: [
       "Built AI features on the Claude API, server-side only and personalised from a short profile: every response must pass a schema, generated content is cached, calls count toward a daily limit, and a demo mode runs the whole app without an API key.",
       "Designed a goal engine of pure functions that works out on track, behind or at risk and moves the remaining dates when you slip, alongside read-only Google Calendar sync with encrypted tokens and budgets stored in integer cents.",
-      "Shipped in 50+ small commits with 279 unit tests and 28 end-to-end flows on desktop and phone, with every migration run on production before the code that needs it.",
+      "Measured the AI, not just validated it: evals score real lessons for exercise order, sound answers and diagrams, and run each code example in a locked-down Node sandbox to check it prints what the lesson says.",
+      "Shipped in small commits with 393 unit tests and 34 end-to-end flows on desktop and phone, with every migration run on production before the code that needs it.",
     ],
     tech: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "Kysely", "Auth.js", "Claude API", "Tailwind", "Vitest", "Playwright"],
     repo: "https://github.com/DanielZyrick/Compound",
     writeup: "https://github.com/DanielZyrick/Compound/blob/main/docs/WRITEUP.md",
     gallery: [
+      {
+        src: "compound/lesson.jpg",
+        alt: "A lesson on map and filter: a code example with its expected output, and a diagram comparing the two methods",
+        caption: "An AI-written lesson: coloured code with its real output, and a diagram the app draws from the AI's labels.",
+      },
       {
         src: "compound/learn.jpg",
         alt: "The Learn page with a track in progress and three recommended tracks",
@@ -71,6 +77,10 @@ export const personalProjects: Project[] = [
       {
         title: "AI output is untrusted input",
         body: "Every Claude call runs on the server. Each response must be JSON that passes a schema, or it's retried once and then shown as a clear error. Generated lessons are cached so they're never paid for twice, every call counts toward a daily limit, and model names come from environment variables.",
+      },
+      {
+        title: "Evals for the AI, with a sandbox",
+        body: "A schema proves a lesson's shape, not that it's right. An eval script asks the real AI for eight lessons and checks them, including running each JavaScript example in a separate Node process with no files, network or secrets, to confirm it prints what the lesson claims. Its first failures were my own checks being too strict.",
       },
       {
         title: "Goal schedules are pure functions",
