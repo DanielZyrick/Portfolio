@@ -7,6 +7,13 @@ import { allProjects } from "@/app/lib/projects";
 
 const marqueeImages = allProjects.filter((project) => project.src);
 
+// Each image gets a slot a fifth of the strip wide, and fills 90% of it. A row
+// grows with the number of projects instead of squeezing them in, so it never
+// runs past its own end and under the copy of the row that follows it.
+const SLOT_PERCENT = 20;
+const rowWidth = `${Math.max(100, marqueeImages.length * SLOT_PERCENT)}%`;
+const imageWidth = `${(90 / Math.max(marqueeImages.length, 100 / SLOT_PERCENT)).toFixed(3)}%`;
+
 export default function ScrollTriggerSlide() {
   const imageContainerOne = useRef(null);
   const imageContainerTwo = useRef(null);
@@ -74,7 +81,8 @@ export default function ScrollTriggerSlide() {
           ref={slider}
         >
           <div
-            className="absolute top-0 left-0 w-full flex justify-around w-full nowrap object-cover"
+            className="absolute top-0 left-0 flex justify-around nowrap object-cover"
+            style={{ width: rowWidth }}
             ref={imageContainerOne}
           >
             {marqueeImages.map((project) => (
@@ -84,14 +92,15 @@ export default function ScrollTriggerSlide() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "18%", height: "auto" }}
+                style={{ width: imageWidth, height: "auto" }}
                 alt={`${project.label} project screenshot`}
                 priority={true}
               />
             ))}
           </div>
           <div
-            className="absolute top-0 w-full flex justify-around nowrap object-cover"
+            className="absolute top-0 flex justify-around nowrap object-cover"
+            style={{ width: rowWidth }}
             ref={imageContainerTwo}
           >
             {marqueeImages.map((project) => (
@@ -101,7 +110,7 @@ export default function ScrollTriggerSlide() {
                 width="0"
                 height="0"
                 sizes="100vw"
-                style={{ width: "18%", height: "auto" }}
+                style={{ width: imageWidth, height: "auto" }}
                 alt={`${project.label} project screenshot`}
                 priority={true}
               />
